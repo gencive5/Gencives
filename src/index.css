@@ -29,7 +29,7 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
-  background-color: #597897;
+  background-color: #cfd9e3;
 }
 
 h1 {
@@ -68,3 +68,13 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+
+.logo {
+  height: 20em;
+  padding: 3em;
+
+  
+}
+
+
+
