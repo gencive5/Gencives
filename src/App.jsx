@@ -12,8 +12,10 @@ import logo from './assets/logogencives.png';
 
 
 function App() {
+
+  
   return (
-    <Container fluid className="custom-container">
+    <Container-fluid>
       <Row>
         <Col sm={8} className="p-0">
           <img src={logo} alt="logo" className='logo'/>
@@ -21,7 +23,7 @@ function App() {
         </Col>
         <Col sm={4} className="p-0"><div className="touch-zone"></div></Col>
       </Row>
-    </Container>
+    </Container-fluid>
   );
 }
 

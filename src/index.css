@@ -79,20 +79,15 @@ button:focus-visible {
 .touch-zone {
   height: 100vh; 
   width: 40vh;
-  background-color: red; /* Change the color and opacity as needed */
+  background-color: red;
   
 }
 
-/*.custom-container {
+.custom-container {
 
-  height: 100vh; 
-  width: 100vh;
+
   margin: 0;
   padding: 0;
 
 }
 
-.custom-col {
-  margin: 0;
-  padding: 7em;
-}
