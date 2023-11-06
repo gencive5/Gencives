@@ -11,24 +11,21 @@ import logo from './assets/logogencives.png';
 
 
 
-function ResponsiveAutoExample() {
+function App() {
   return (
-    <Container>
+    <Container fluid className="custom-container">
       <Row>
-        <Col sm={8}><img src={logo} alt="logo" className='logo'/></Col>
-        <Col sm={4}>sm=4</Col>
+        <Col sm={8} className="p-0">
+          <img src={logo} alt="logo" className='logo'/>
+          <p>scroll</p>
+        </Col>
+        <Col sm={4} className="p-0"><div className="touch-zone"></div></Col>
       </Row>
     </Container>
   );
 }
 
-function App() {
-  return (
-    <>
-      <ResponsiveAutoExample />
-      <p>scroll</p>
-    </>
-  )
-}
+
+
 
 export default App;

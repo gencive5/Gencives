@@ -23,13 +23,14 @@ a:hover {
   color: #535bf2;
 }
 
-body {
+body, html {
   margin: 0;
   display: flex;
   place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  width: 100%;
+  height: 100%;
   background-color: #cfd9e3;
+  overflow: hidden;
 }
 
 h1 {
@@ -59,7 +60,7 @@ button:focus-visible {
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
-    background-color: #7c6c6c;
+    background-color: #f75454;
   }
   a:hover {
     color: #747bff;
@@ -73,8 +74,25 @@ button:focus-visible {
   height: 20em;
   padding: 3em;
 
+}
+
+.touch-zone {
+  height: 100vh; 
+  width: 40vh;
+  background-color: red; /* Change the color and opacity as needed */
   
 }
 
+/*.custom-container {
 
+  height: 100vh; 
+  width: 100vh;
+  margin: 0;
+  padding: 0;
 
+}
+
+.custom-col {
+  margin: 0;
+  padding: 7em;
+}
