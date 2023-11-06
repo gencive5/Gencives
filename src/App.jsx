@@ -26,10 +26,9 @@ function App() {
   return (
     <>
       <ResponsiveAutoExample />
-      <Button>press me</Button>
+      <p>scroll</p>
     </>
   )
 }
 
 export default App;
-
