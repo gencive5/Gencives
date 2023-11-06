@@ -79,12 +79,11 @@ button:focus-visible {
 .touch-zone {
   height: 100vh; 
   width: 40vh;
-  background-color: red;
+  background: linear-gradient(#e66465, #e59191);
   
 }
 
 .custom-container {
-
 
   margin: 0;
   padding: 0;
