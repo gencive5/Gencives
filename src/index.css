@@ -57,8 +57,10 @@ button:focus-visible {
 .logo {
   height: 40vh;
   padding: 6vh;
+  margin-top: 20vh;
+  margin-bottom: 20vh;
   align-items: center;
-
+  
 }
 
 .touch-zone {
