@@ -25,18 +25,15 @@ a:hover {
 
 body, html {
   margin: 0;
-  display: flex;
+  padding: 0;
+ 
   place-items: center;
-  width: 100%;
-  height: 100%;
+  
   background-color: #cfd9e3;
   overflow: hidden;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-}
+
 
 button {
   border-radius: 8px;
@@ -57,29 +54,18 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #f75454;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
-}
-
 .logo {
-  height: 20em;
-  padding: 3em;
+  height: 40vh;
+  padding: 3vh;
 
 }
 
 .touch-zone {
   height: 100vh; 
-  width: 40vh;
+  width: 100vh;
   background: linear-gradient(#e66465, #e59191);
+  margin: 0;
+  padding: 0;
   
 }
 
@@ -87,6 +73,7 @@ button:focus-visible {
 
   margin: 0;
   padding: 0;
+ 
 
 }
 
