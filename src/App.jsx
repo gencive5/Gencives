@@ -19,7 +19,7 @@ function App() {
         <Col sm={8} className="d-flex align-items-center justify-content-center">
           <div className="main-zone">
           <img src={logo} alt="logo" className='logo'/>
-          <p>scroll</p>
+          
           </div>
         </Col>
         <Col sm={4} className="d-none d-lg-block"><div className="touch-zone"></div></Col>
@@ -31,3 +31,4 @@ function App() {
 
 
 export default App;
+

@@ -29,7 +29,7 @@ body, html {
  
   place-items: center;
   
-  background-color: #cfd9e3;
+  background-color: #fcfcfc;
   overflow: hidden;
 }
 
@@ -67,7 +67,7 @@ button:focus-visible {
 .touch-zone {
   height: 100vh; 
   width: 100vh;
-  background: linear-gradient(#e66465, #e59191);
+  background: linear-gradient(#fefafa, #ffd9d9);
   margin: 0;
   padding: 0;
   
