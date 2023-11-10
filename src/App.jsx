@@ -7,6 +7,13 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Carousel from 'react-bootstrap/Carousel';
 import logo from './assets/logogencives.png';
+import somnanbule from './assets/images/somnanbule.jpg';
+import shycat from './assets/images/shycat.jpg';
+import waterhouse from './assets/images/waterhouse.jpg';
+import leanne from './assets/images/leanne.jpg';
+import fastbraces from './assets/images/fastbraces.jpg';
+
+
 
 function App() {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -49,7 +56,7 @@ function App() {
               <img
                 className="d-block w-100"
                 style={{ objectFit: 'contain' }}
-                src="https://placekitten.com/800/400"
+                src={somnanbule}
                 alt="Slide 1"
               />
             </Carousel.Item>
@@ -59,7 +66,7 @@ function App() {
               <img
                 className="d-block w-100"
                 style={{ objectFit: 'contain' }}
-                src="https://placekitten.com/800/401"
+                src={shycat}
                 alt="Slide 2"
               />
             </Carousel.Item>
@@ -69,7 +76,7 @@ function App() {
               <img
                 className="d-block w-100"
                 style={{ objectFit: 'contain' }}
-                src="https://placekitten.com/800/402"
+                src={waterhouse}
                 alt="Slide 3"
               />
             </Carousel.Item>
@@ -79,7 +86,7 @@ function App() {
               <img
                 className="d-block w-100"
                 style={{ objectFit: 'contain' }}
-                src="https://placekitten.com/800/403"
+                src={leanne}
                 alt="Slide 4"
               />
             </Carousel.Item>
@@ -89,12 +96,13 @@ function App() {
               <img
                 className="d-block w-100"
                 style={{ objectFit: 'contain' }}
-                src="https://placekitten.com/800/404"
+                src={fastbraces}
                 alt="Slide 5"
               />
             </Carousel.Item>
           </Carousel>
         </Col>
+        
         <Col sm={4} className="d-none d-lg-block">
           <div className="touch-zone">
             {/* Add your content for the second column */}
