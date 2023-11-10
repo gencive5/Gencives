@@ -39,6 +39,7 @@ function App() {
             interval={null}
             activeIndex={activeIndex}
             onSelect={handleCarouselSelect}
+            indicators={false} 
           >
             {/* First Slide - Logo */}
             <Carousel.Item>
