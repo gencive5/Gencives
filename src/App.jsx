@@ -16,7 +16,7 @@ function App() {
   };
 
   const handleCarouselSelect = (selectedIndex) => {
-    if (selectedIndex === 5) {
+    if (selectedIndex === 6) {
       // Manually reset the active index to the first slide when transitioning from the last slide
       setActiveIndex(0);
     } else {
@@ -28,67 +28,72 @@ function App() {
     <Container fluid={true} className="custom-container">
       <Row>
         <Col sm={8} className="d-flex align-items-center justify-content-center">
-          {activeIndex === 0 ? (
-            // Display the logo with CSS when on the first slide
-            <img
-              className="d-block w-100 logo"
-              src={logo}
-              alt="Logo"
-              onClick={handleLogoClick}
-            />
-          ) : (
-            // Display the Carousel when on any slide other than the first
-            <Carousel
-              interval={null}
-              activeIndex={activeIndex}
-              onSelect={handleCarouselSelect}
-            >
-              {/* Second Slide */}
-              <Carousel.Item>
-                <img
-                  className="d-block w-100"
-                  src="https://placekitten.com/800/400"
-                  alt="Slide 1"
-                />
-              </Carousel.Item>
+          <Carousel
+            interval={null}
+            activeIndex={activeIndex}
+            onSelect={handleCarouselSelect}
+          >
+            {/* First Slide - Logo */}
+            <Carousel.Item>
+              <img
+                className="d-block w-100 logo"
+                style={{ objectFit: 'contain' }}
+                src={logo}
+                alt="Logo"
+                onClick={handleLogoClick}
+              />
+            </Carousel.Item>
 
-              {/* Third Slide */}
-              <Carousel.Item>
-                <img
-                  className="d-block w-100"
-                  src="https://placekitten.com/800/401"
-                  alt="Slide 2"
-                />
-              </Carousel.Item>
+            {/* Second Slide */}
+            <Carousel.Item>
+              <img
+                className="d-block w-100"
+                style={{ objectFit: 'contain' }}
+                src="https://placekitten.com/800/400"
+                alt="Slide 1"
+              />
+            </Carousel.Item>
 
-              {/* Fourth Slide */}
-              <Carousel.Item>
-                <img
-                  className="d-block w-100"
-                  src="https://placekitten.com/800/402"
-                  alt="Slide 3"
-                />
-              </Carousel.Item>
+            {/* Third Slide */}
+            <Carousel.Item>
+              <img
+                className="d-block w-100"
+                style={{ objectFit: 'contain' }}
+                src="https://placekitten.com/800/401"
+                alt="Slide 2"
+              />
+            </Carousel.Item>
 
-              {/* Fifth Slide */}
-              <Carousel.Item>
-                <img
-                  className="d-block w-100"
-                  src="https://placekitten.com/800/403"
-                  alt="Slide 4"
-                />
-              </Carousel.Item>
+            {/* Fourth Slide */}
+            <Carousel.Item>
+              <img
+                className="d-block w-100"
+                style={{ objectFit: 'contain' }}
+                src="https://placekitten.com/800/402"
+                alt="Slide 3"
+              />
+            </Carousel.Item>
 
-              {/* Sixth Slide */}
-              <Carousel.Item>
-                <img
-                  className="d-block w-100"
-                  src="https://placekitten.com/800/404"
-                  alt="Slide 5"
-                />
-              </Carousel.Item>
-            </Carousel>
-          )}
+            {/* Fifth Slide */}
+            <Carousel.Item>
+              <img
+                className="d-block w-100"
+                style={{ objectFit: 'contain' }}
+                src="https://placekitten.com/800/403"
+                alt="Slide 4"
+              />
+            </Carousel.Item>
+
+            {/* Sixth Slide */}
+            <Carousel.Item>
+              <img
+                className="d-block w-100"
+                style={{ objectFit: 'contain' }}
+                src="https://placekitten.com/800/404"
+                alt="Slide 5"
+              />
+            </Carousel.Item>
+          </Carousel>
         </Col>
         <Col sm={4} className="d-none d-lg-block">
           <div className="touch-zone">
@@ -101,6 +106,8 @@ function App() {
 }
 
 export default App;
+
+
 
 
 
