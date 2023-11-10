@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import './index.css';
@@ -14,12 +14,33 @@ function App() {
 
   const handleLogoClick = () => {
     setShowCarousel(!showCarousel);
-    setActiveIndex(1); // Set the activeIndex to the first slide in the carousel
+    setActiveIndex(1);
   };
 
-  const handleCarouselSelect = (selectedIndex) => {
+  const handleCarouselSlide = (selectedIndex, e) => {
     setActiveIndex(selectedIndex);
+    if (selectedIndex === 5) {
+      // If the last slide is reached, go back to the first slide
+      setShowCarousel(false);
+      setTimeout(() => {
+        setActiveIndex(0);
+        setShowCarousel(true);
+      }, 0);
+    }
   };
+
+  useEffect(() => {
+    // Automatically transition to the next slide every 3 seconds
+    const interval = setInterval(() => {
+      if (activeIndex < 5) {
+        setActiveIndex(activeIndex + 1);
+      } else {
+        setActiveIndex(0);
+      }
+    }, 3000);
+
+    return () => clearInterval(interval);
+  }, [activeIndex]);
 
   return (
     <Container fluid={true} className="custom-container">
@@ -28,51 +49,25 @@ function App() {
           <Carousel
             interval={null}
             activeIndex={activeIndex}
-            onSelect={handleCarouselSelect}
+            onSelect={handleCarouselSlide}
           >
             <Carousel.Item>
               <img
-                className="d-block w-100"
+                className={`d-block w-100 ${showCarousel ? '' : 'logo'}`}
                 src={logo}
                 alt="Logo"
                 onClick={handleLogoClick}
               />
             </Carousel.Item>
-            <Carousel.Item>
-              <img
-                className="d-block w-100"
-                src="https://placekitten.com/800/400"
-                alt="Slide 1"
-              />
-            </Carousel.Item>
-            <Carousel.Item>
-              <img
-                className="d-block w-100"
-                src="https://placekitten.com/800/401"
-                alt="Slide 2"
-              />
-            </Carousel.Item>
-            <Carousel.Item>
-              <img
-                className="d-block w-100"
-                src="https://placekitten.com/800/402"
-                alt="Slide 3"
-              />
-            </Carousel.Item>
-            <Carousel.Item>
-              <img
-                className="d-block w-100"
-                src="https://placekitten.com/800/403"
-                alt="Slide 4"
-              />
-            </Carousel.Item>
-            <Carousel.Item>
-              <img
-                className="d-block w-100"
-                src="https://placekitten.com/800/404"
-                alt="Slide 5"
-              />
-            </Carousel.Item>
+            {[...Array(4)].map((_, index) => (
+              <Carousel.Item key={index + 1}>
+                <img
+                  className="d-block w-100"
+                  src={`https://placekitten.com/800/40${index + 1}`}
+                  alt={`Slide ${index + 1}`}
+                />
+              </Carousel.Item>
+            ))}
           </Carousel>
         </Col>
         <Col sm={4} className="d-none d-lg-block">
@@ -86,3 +81,4 @@ function App() {
 }
 
 export default App;
+
