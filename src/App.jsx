@@ -44,7 +44,7 @@ function App() {
             {/* First Slide - Logo */}
             <Carousel.Item>
               <img
-                className="d-block w-100 logo"
+                className="d-block w-100 logo carousel-img"
                 style={{ objectFit: 'contain' }}
                 src={logo}
                 alt="Logo"
@@ -55,7 +55,7 @@ function App() {
             {/* Second Slide */}
             <Carousel.Item>
               <img
-                className="d-block w-100"
+                className="d-block w-100 carousel-img"
                 style={{ objectFit: 'contain' }}
                 src={somnanbule}
                 alt="Slide 1"
@@ -65,7 +65,7 @@ function App() {
             {/* Third Slide */}
             <Carousel.Item>
               <img
-                className="d-block w-100"
+                className="d-block w-100 carousel-img"
                 style={{ objectFit: 'contain' }}
                 src={shycat}
                 alt="Slide 2"
@@ -75,7 +75,7 @@ function App() {
             {/* Fourth Slide */}
             <Carousel.Item>
               <img
-                className="d-block w-100"
+                className="d-block w-100 carousel-img"
                 style={{ objectFit: 'contain' }}
                 src={waterhouse}
                 alt="Slide 3"
@@ -85,7 +85,7 @@ function App() {
             {/* Fifth Slide */}
             <Carousel.Item>
               <img
-                className="d-block w-100"
+                className="d-block w-100 carousel-img"
                 style={{ objectFit: 'contain' }}
                 src={leanne}
                 alt="Slide 4"
@@ -95,7 +95,7 @@ function App() {
             {/* Sixth Slide */}
             <Carousel.Item>
               <img
-                className="d-block w-100"
+                className="d-block w-100 carousel-img"
                 style={{ objectFit: 'contain' }}
                 src={fastbraces}
                 alt="Slide 5"
