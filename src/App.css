@@ -21,10 +21,33 @@
 
 .carousel-img {
   width: 100%;
-  height: 300px; 
-  object-fit: contain; /* or 'cover' */
+  height: 300px;
+  object-fit: contain;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 
 
+/* Mobile-first approach */
+/* ... (other styles) */
+
+/* For smaller screens */
+@media (max-width: 768px) {
+  .main-zone .d-flex {
+    align-items: center !important;
+    justify-content: center !important;
+    height: 100vh;
+  }
+
+  .main-zone .carousel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+  }
+
+  
+}
 
