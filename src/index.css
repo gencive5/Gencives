@@ -57,9 +57,7 @@ button:focus-visible {
 .logo {
   height: 40vh;
   padding: 9vh;
-  margin-top: 20vh;
-  margin-bottom: 20vh;
-  margin-right: 5vh;
+  
   align-items: center;
   
 }
