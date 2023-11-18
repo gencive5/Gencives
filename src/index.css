@@ -76,7 +76,7 @@ button:focus-visible {
 .main-zone {
 
   height: 100vh; 
-  width: 100vh;
+ 
   margin: 0;
   padding: 0;
 
@@ -93,3 +93,4 @@ button:focus-visible {
   color: #535bf2;
   
 }
+

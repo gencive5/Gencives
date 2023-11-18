@@ -32,7 +32,7 @@ function App() {
   };
 
   return (
-    <Container fluid={true} className="custom-container">
+    <Container fluid={true} className="custom-container main-zone">
       <Row>
         <Col sm={8} className="d-flex align-items-center justify-content-center">
           <Carousel
