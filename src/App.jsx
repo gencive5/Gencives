@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import './index.css';
@@ -13,35 +13,49 @@ import waterhouse from './assets/images/waterhouse.jpg';
 import leanne from './assets/images/leanne.jpg';
 import fastbraces from './assets/images/fastbraces.jpg';
 
-
-
 function App() {
   const [activeIndex, setActiveIndex] = useState(0);
+  const [canScroll, setCanScroll] = useState(true);
+
+  useEffect(() => {
+    const handleScroll = (event) => {
+      if (!canScroll) return;
+      
+      setCanScroll(false);
+      setTimeout(() => setCanScroll(true), 1800); // Adjust this timeout value as needed for the pause
+
+      const delta = Math.sign(event.deltaY); // Get scroll direction (1 for down, -1 for up)
+      const newIndex = (activeIndex + delta) % 6; // Total number of slides is 6
+
+      if (newIndex >= 0) {
+        setActiveIndex(newIndex);
+      } else {
+        setActiveIndex(5); // Go to the last slide if scrolling up from the first slide
+      }
+    };
+
+    window.addEventListener('wheel', handleScroll);
+
+    return () => {
+      window.removeEventListener('wheel', handleScroll);
+    };
+  }, [activeIndex, canScroll]);
 
   const handleLogoClick = () => {
     setActiveIndex(1);
   };
 
-  const handleCarouselSelect = (selectedIndex) => {
-    if (selectedIndex === 6) {
-      // Manually reset the active index to the first slide when transitioning from the last slide
-      setActiveIndex(0);
-    } else {
-      setActiveIndex(selectedIndex);
-    }
-  };
-
   return (
-    <Container fluid={true} className="custom-container main-zone">
+    <Container fluid className="custom-container main-zone">
       <Row>
         <Col sm={8} className="d-flex align-items-center justify-content-center">
           <Carousel
             interval={null}
             activeIndex={activeIndex}
-            onSelect={handleCarouselSelect}
-            indicators={false} 
+            indicators={false}
+            onSelect={(selectedIndex) => setActiveIndex(selectedIndex)}
           >
-            {/* First Slide - Logo */}
+            {/* Slides */}
             <Carousel.Item>
               <img
                 className="d-block w-100 logo carousel-img"
@@ -51,8 +65,6 @@ function App() {
                 onClick={handleLogoClick}
               />
             </Carousel.Item>
-
-            {/* Second Slide */}
             <Carousel.Item>
               <img
                 className="d-block w-100 carousel-img"
@@ -61,8 +73,6 @@ function App() {
                 alt="Slide 1"
               />
             </Carousel.Item>
-
-            {/* Third Slide */}
             <Carousel.Item>
               <img
                 className="d-block w-100 carousel-img"
@@ -71,8 +81,6 @@ function App() {
                 alt="Slide 2"
               />
             </Carousel.Item>
-
-            {/* Fourth Slide */}
             <Carousel.Item>
               <img
                 className="d-block w-100 carousel-img"
@@ -81,8 +89,6 @@ function App() {
                 alt="Slide 3"
               />
             </Carousel.Item>
-
-            {/* Fifth Slide */}
             <Carousel.Item>
               <img
                 className="d-block w-100 carousel-img"
@@ -91,8 +97,6 @@ function App() {
                 alt="Slide 4"
               />
             </Carousel.Item>
-
-            {/* Sixth Slide */}
             <Carousel.Item>
               <img
                 className="d-block w-100 carousel-img"
@@ -103,11 +107,9 @@ function App() {
             </Carousel.Item>
           </Carousel>
         </Col>
-        
+
         <Col sm={4} className="d-none d-lg-block">
-          <div className="touch-zone">
-            {/* Add your content for the second column */}
-          </div>
+          <div className="touch-zone">{/* Your content for the second column */}</div>
         </Col>
       </Row>
     </Container>
