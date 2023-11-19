@@ -15,12 +15,13 @@ import fastbraces from './assets/images/fastbraces.jpg';
 
 function App() {
   const [activeIndex, setActiveIndex] = useState(0);
+  const [glow, setGlow] = useState(false);
   const [canScroll, setCanScroll] = useState(true);
 
   useEffect(() => {
     const handleScroll = (event) => {
       if (!canScroll) return;
-      
+
       setCanScroll(false);
       setTimeout(() => setCanScroll(true), 1800); // Adjust this timeout value as needed for the pause
 
@@ -34,10 +35,15 @@ function App() {
       }
     };
 
+    const interval = setInterval(() => {
+      setGlow((prevState) => !prevState); // Toggle glow state
+    }, 1500); // Adjust the interval duration as needed
+
     window.addEventListener('wheel', handleScroll);
 
     return () => {
       window.removeEventListener('wheel', handleScroll);
+      clearInterval(interval); // Clear interval on component unmount
     };
   }, [activeIndex, canScroll]);
 
@@ -58,7 +64,7 @@ function App() {
             {/* Slides */}
             <Carousel.Item>
               <img
-                className="d-block w-100 logo carousel-img"
+                className={`d-block w-100 logo carousel-img ${glow ? 'glow' : ''}`}
                 style={{ objectFit: 'contain' }}
                 src={logo}
                 alt="Logo"

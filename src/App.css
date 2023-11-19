@@ -15,9 +15,15 @@
 .logo:hover {
   filter: drop-shadow(0 0 2em #646cffaa);
 }
-.logo.react:hover {
+
+.glow {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+
+.glow.react {
   filter: drop-shadow(0 0 2em #61dafbaa);
 }
+
 
 .carousel-img {
   width: 100%;
