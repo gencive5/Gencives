@@ -13,37 +13,39 @@ import waterhouse from './assets/images/waterhouse.jpg';
 import leanne from './assets/images/leanne.jpg';
 import fastbraces from './assets/images/fastbraces.jpg';
 
+
 function App() {
   const [activeIndex, setActiveIndex] = useState(0);
   const [glow, setGlow] = useState(false);
   const [canScroll, setCanScroll] = useState(true);
+  const [backgroundColor, setBackgroundColor] = useState('');
 
   useEffect(() => {
     const handleScroll = (event) => {
       if (!canScroll) return;
 
       setCanScroll(false);
-      setTimeout(() => setCanScroll(true), 1800); // Adjust this timeout value as needed for the pause
+      setTimeout(() => setCanScroll(true), 1800);
 
-      const delta = Math.sign(event.deltaY); // Get scroll direction (1 for down, -1 for up)
-      const newIndex = (activeIndex + delta) % 6; // Total number of slides is 6
+      const delta = Math.sign(event.deltaY);
+      const newIndex = (activeIndex + delta) % 6;
 
       if (newIndex >= 0) {
         setActiveIndex(newIndex);
       } else {
-        setActiveIndex(5); // Go to the last slide if scrolling up from the first slide
+        setActiveIndex(5);
       }
     };
 
     const interval = setInterval(() => {
-      setGlow((prevState) => !prevState); // Toggle glow state
-    }, 1500); // Adjust the interval duration as needed
+      setGlow((prevState) => !prevState);
+    }, 1500);
 
     window.addEventListener('wheel', handleScroll);
 
     return () => {
       window.removeEventListener('wheel', handleScroll);
-      clearInterval(interval); // Clear interval on component unmount
+      clearInterval(interval);
     };
   }, [activeIndex, canScroll]);
 
@@ -51,8 +53,16 @@ function App() {
     setActiveIndex(1);
   };
 
+  const handleColorChange = () => {
+    setBackgroundColor((prevColor) => {
+      if (prevColor === 'pink') return 'black';
+      if (prevColor === 'black') return '';
+      return 'pink';
+    });
+  };
+
   return (
-    <Container fluid className="custom-container main-zone">
+    <Container fluid className={`custom-container main-zone ${backgroundColor}`}>
       <Row>
         <Col sm={8} className="d-flex align-items-center justify-content-center">
           <Carousel
@@ -120,15 +130,25 @@ function App() {
                 setActiveIndex((prevIndex) => (prevIndex === 0 ? 5 : prevIndex - 1))
               }
             >
-              Previous
+              ←
             </button>
             <button
               className="btn btn-primary"
               onClick={() => setActiveIndex((prevIndex) => (prevIndex + 1) % 6)}
             >
-              Next
+              →
             </button>
           </div>
+
+             {/* Button to toggle background color */}
+             <button className="btn btn-primary mt-3" onClick={handleColorChange}>
+  {backgroundColor === 'pink'
+    ? 'Night Mode'
+    : backgroundColor === 'black'
+    ? 'Default Color'
+    : 'Pink Color'}
+</button>
+
         </Col>
 
         <Col sm={4} className="d-none d-lg-block">

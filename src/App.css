@@ -61,3 +61,13 @@
 .carousel-control-next {
   display: none;
 }
+
+/* Pink background */
+.pink {
+  background-color: pink;
+}
+
+/* Black (night mode) background */
+.black {
+  background-color: black;
+}
