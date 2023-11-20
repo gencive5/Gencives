@@ -112,6 +112,23 @@ function App() {
               />
             </Carousel.Item>
           </Carousel>
+           {/* Custom next and previous indicators */}
+           <div className="d-flex justify-content-between mt-3 previousnext">
+            <button
+              className="btn btn-primary"
+              onClick={() =>
+                setActiveIndex((prevIndex) => (prevIndex === 0 ? 5 : prevIndex - 1))
+              }
+            >
+              Previous
+            </button>
+            <button
+              className="btn btn-primary"
+              onClick={() => setActiveIndex((prevIndex) => (prevIndex + 1) % 6)}
+            >
+              Next
+            </button>
+          </div>
         </Col>
 
         <Col sm={4} className="d-none d-lg-block">

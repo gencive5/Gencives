@@ -54,6 +54,10 @@
     height: 100%;
   }
 
-  
 }
 
+/* In your CSS file or style section */
+.carousel-control-prev,
+.carousel-control-next {
+  display: none;
+}
