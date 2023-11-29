@@ -51,9 +51,9 @@ function App() {
 
   return (
     <Container fluid className="custom-container main-zone">
-        <img src={logo} alt="Logo" className="logo" /> {/* Logo at the top left corner */}
         <Row>
         <Col sm={8} className="d-flex align-items-center justify-content-center">
+        <img src={logo} alt="Logo" className="logo" /> 
           <Carousel
             interval={null}
             activeIndex={activeIndex}

@@ -54,13 +54,7 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
-.logo {
-  height: 14vh;
-  
-  
-  align-items: center;
-  
-}
+
 
 .touch-zone {
   height: 100vh; 
