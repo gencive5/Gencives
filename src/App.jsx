@@ -6,6 +6,7 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Carousel from 'react-bootstrap/Carousel';
+import logo from './assets/logogencives.png';
 import somnanbule from './assets/images/somnanbule.jpg';
 import shycat from './assets/images/shycat.jpg';
 import waterhouse from './assets/images/waterhouse.jpg';
@@ -50,7 +51,8 @@ function App() {
 
   return (
     <Container fluid className="custom-container main-zone">
-      <Row>
+        <img src={logo} alt="Logo" className="logo" /> {/* Logo at the top left corner */}
+        <Row>
         <Col sm={8} className="d-flex align-items-center justify-content-center">
           <Carousel
             interval={null}
