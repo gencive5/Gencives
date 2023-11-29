@@ -75,3 +75,10 @@
 .black {
   background-color: black;
 }
+
+.previousnext {
+
+  position: absolute;
+  bottom: 0;
+ 
+}

@@ -54,6 +54,15 @@ function App() {
         <Row>
         <Col sm={8} className="d-flex align-items-center justify-content-center">
         <img src={logo} alt="Logo" className="logo" /> 
+        {/* Custom previous and next indicators */}
+       <div className="d-flex justify-content-between mt-3 previousnext">
+            <button className="btn btn-primary" onClick={handlePrevious}>
+              {`← ${activeIndex === 0 ? 5 : activeIndex}`}
+            </button>
+            <button className="btn btn-primary" onClick={handleNext}>
+              {`→ ${activeIndex === 4 ? 1 : activeIndex + 2}`}
+            </button>
+          </div>
           <Carousel
             interval={null}
             activeIndex={activeIndex}
@@ -102,15 +111,7 @@ function App() {
               />
             </Carousel.Item>
           </Carousel>
-           {/* Custom previous and next indicators */}
-           <div className="d-flex justify-content-between mt-3 previousnext">
-            <button className="btn btn-primary" onClick={handlePrevious}>
-              {`← ${activeIndex === 0 ? 5 : activeIndex}`}
-            </button>
-            <button className="btn btn-primary" onClick={handleNext}>
-              {`→ ${activeIndex === 4 ? 1 : activeIndex + 2}`}
-            </button>
-          </div>
+          
         </Col>
 
         <Col sm={4} className="d-none d-lg-block">
