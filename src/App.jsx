@@ -21,15 +21,15 @@ function App() {
       if (!canScroll) return;
       
       setCanScroll(false);
-      setTimeout(() => setCanScroll(true), 1800); // Adjust this timeout value as needed for the pause
+      setTimeout(() => setCanScroll(true), 1800);
 
-      const delta = Math.sign(event.deltaY); // Get scroll direction (1 for down, -1 for up)
-      const newIndex = (activeIndex + delta) % 5; // Total number of slides is 5 now
+      const delta = Math.sign(event.deltaY);
+      const newIndex = (activeIndex + delta) % 5;
 
       if (newIndex >= 0) {
         setActiveIndex(newIndex);
       } else {
-        setActiveIndex(4); // Go to the last slide if scrolling up from the first slide
+        setActiveIndex(4);
       }
     };
 
@@ -39,6 +39,14 @@ function App() {
       window.removeEventListener('wheel', handleScroll);
     };
   }, [activeIndex, canScroll]);
+
+  const handlePrevious = () => {
+    setActiveIndex((prevIndex) => (prevIndex === 0 ? 4 : prevIndex - 1));
+  };
+
+  const handleNext = () => {
+    setActiveIndex((prevIndex) => (prevIndex + 1) % 5);
+  };
 
   return (
     <Container fluid className="custom-container main-zone">
@@ -92,6 +100,15 @@ function App() {
               />
             </Carousel.Item>
           </Carousel>
+           {/* Custom previous and next indicators */}
+           <div className="d-flex justify-content-between mt-3 previousnext">
+            <button className="btn btn-primary" onClick={handlePrevious}>
+              {`← ${activeIndex === 0 ? 5 : activeIndex}`}
+            </button>
+            <button className="btn btn-primary" onClick={handleNext}>
+              {`→ ${activeIndex === 4 ? 1 : activeIndex + 2}`}
+            </button>
+          </div>
         </Col>
 
         <Col sm={4} className="d-none d-lg-block">
