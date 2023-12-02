@@ -55,7 +55,7 @@ function App() {
         <Col sm={8} className="d-flex align-items-center justify-content-center">
         <img src={logo} alt="Logo" className="logo" /> 
         {/* Custom previous and next indicators */}
-       <div className="d-flex justify-content-between mt-3 previousnext">
+       <div className="mt-3 previousnext">
             <button className="btn btn-primary" onClick={handlePrevious}>
               {`← ${activeIndex === 0 ? 5 : activeIndex}`}
             </button>

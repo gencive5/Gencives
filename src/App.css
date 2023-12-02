@@ -46,8 +46,8 @@
 /* For smaller screens */
 @media (max-width: 768px) {
   .main-zone .d-flex {
-    align-items: center !important;
-    justify-content: center !important;
+    align-items: center;
+    justify-content: center;
     height: 100vh;
   }
 
@@ -76,9 +76,24 @@
   background-color: black;
 }
 
-.previousnext {
 
+/* For previous and next buttons */
+.previousnext {
+  display: flex !important;
+  bottom: 0 !important;
   position: absolute;
-  bottom: 0;
- 
 }
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+  .previousnext {
+    z-index: 1000;
+    bottom: 0 !important;
+    position: absolute;
+    
+  }
+}
+
+
+
+
