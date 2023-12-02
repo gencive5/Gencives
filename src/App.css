@@ -13,7 +13,17 @@
   position: absolute;
   top: 0;
   left: 0;
- 
+ }
+
+ @media (max-width: 768px) {
+  .logo {
+    align-items: center;
+    position: absolute;
+    top:5%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+    
+  }
 }
 
 .logo:hover {
@@ -80,7 +90,7 @@
 /* For previous and next buttons */
 .previousnext {
   display: flex !important;
-  bottom: 0 !important;
+  bottom: 1em !important;
   position: absolute;
 }
 
@@ -88,7 +98,7 @@
 @media (max-width: 768px) {
   .previousnext {
     z-index: 1000;
-    bottom: 0 !important;
+    bottom: 1em !important;
     position: absolute;
     
   }
