@@ -57,10 +57,10 @@ function App() {
         {/* Custom previous and next indicators */}
        <div className="mt-3 previousnext">
             <button className="btn btn-primary" onClick={handlePrevious}>
-              {`← ${activeIndex === 0 ? 5 : activeIndex}`}
+             previous
             </button>
             <button className="btn btn-primary" onClick={handleNext}>
-              {`→ ${activeIndex === 4 ? 1 : activeIndex + 2}`}
+              next
             </button>
           </div>
           <Carousel
