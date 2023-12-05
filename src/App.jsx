@@ -17,22 +17,28 @@ import fastbraces from './assets/images/fastbraces.jpg';
 function App() {
   const [activeIndex, setActiveIndex] = useState(0); // First carousel active index
   const [activeIndex2, setActiveIndex2] = useState(0); // Second carousel active index
+  const [canScroll, setCanScroll] = useState(true);
 
   useEffect(() => {
     const handleScroll = (event) => {
-      const delta = Math.sign(event.deltaY);
-      const newIndex = (activeIndex + delta + 5) % 5;
+      if (!canScroll) return;
+      
+      setCanScroll(false);
+      setTimeout(() => setCanScroll(true), 1800); // Adjust this timeout value as needed for the pause
+
+      const delta = Math.sign(event.deltaY); // Get scroll direction (1 for down, -1 for up)
+      const newIndex = (activeIndex + delta + 5) % 5; // Total number of slides is 5
 
       setActiveIndex(newIndex);
       setActiveIndex2(newIndex);
     };
 
-    window.addEventListener('wheel', handleScroll, { passive: false });
+    window.addEventListener('wheel', handleScroll);
 
     return () => {
       window.removeEventListener('wheel', handleScroll);
     };
-  }, [activeIndex, activeIndex2]);
+  }, [activeIndex, activeIndex2, canScroll]);
 
   const handlePrevious = () => {
     const newActiveIndex = activeIndex === 0 ? 4 : activeIndex - 1;
@@ -46,7 +52,7 @@ function App() {
     setActiveIndex2(newActiveIndex);
   };
 
-  return(
+  return (
     <Container fluid className="custom-container main-zone">
       <Row>
         <Col sm={8} className="d-flex align-items-center justify-content-center">
