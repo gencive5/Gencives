@@ -13,51 +13,48 @@ import waterhouse from './assets/images/waterhouse.jpg';
 import leanne from './assets/images/leanne.jpg';
 import fastbraces from './assets/images/fastbraces.jpg';
 
+
 function App() {
-  const [activeIndex, setActiveIndex] = useState(0);
-  const [canScroll, setCanScroll] = useState(true);
+  const [activeIndex, setActiveIndex] = useState(0); // First carousel active index
+  const [activeIndex2, setActiveIndex2] = useState(0); // Second carousel active index
 
   useEffect(() => {
     const handleScroll = (event) => {
-      if (!canScroll) return;
-      
-      setCanScroll(false);
-      setTimeout(() => setCanScroll(true), 1800);
-
       const delta = Math.sign(event.deltaY);
-      const newIndex = (activeIndex + delta) % 5;
+      const newIndex = (activeIndex + delta + 5) % 5;
 
-      if (newIndex >= 0) {
-        setActiveIndex(newIndex);
-      } else {
-        setActiveIndex(4);
-      }
+      setActiveIndex(newIndex);
+      setActiveIndex2(newIndex);
     };
 
-    window.addEventListener('wheel', handleScroll);
+    window.addEventListener('wheel', handleScroll, { passive: false });
 
     return () => {
       window.removeEventListener('wheel', handleScroll);
     };
-  }, [activeIndex, canScroll]);
+  }, [activeIndex, activeIndex2]);
 
   const handlePrevious = () => {
-    setActiveIndex((prevIndex) => (prevIndex === 0 ? 4 : prevIndex - 1));
+    const newActiveIndex = activeIndex === 0 ? 4 : activeIndex - 1;
+    setActiveIndex(newActiveIndex);
+    setActiveIndex2(newActiveIndex);
   };
 
   const handleNext = () => {
-    setActiveIndex((prevIndex) => (prevIndex + 1) % 5);
+    const newActiveIndex = (activeIndex + 1) % 5;
+    setActiveIndex(newActiveIndex);
+    setActiveIndex2(newActiveIndex);
   };
 
-  return (
+  return(
     <Container fluid className="custom-container main-zone">
-        <Row>
+      <Row>
         <Col sm={8} className="d-flex align-items-center justify-content-center">
-        <img src={logo} alt="Logo" className="logo" /> 
-        {/* Custom previous and next indicators */}
-       <div className="mt-3 previousnext">
+          <img src={logo} alt="Logo" className="logo" />
+          {/* Custom previous and next indicators */}
+          <div className="mt-3 previousnext">
             <button className="btn btn-primary" onClick={handlePrevious}>
-             previous
+              previous
             </button>
             <button className="btn btn-primary" onClick={handleNext}>
               next
@@ -115,7 +112,55 @@ function App() {
         </Col>
 
         <Col sm={4} className="d-none d-lg-block">
-          <div className="touch-zone">{/* Your content for the second column */}</div>
+          {/* Touch zone for the second carousel */}
+          <div className="touch-zone">
+            <Carousel
+              interval={null}
+              activeIndex={activeIndex2}
+              indicators={false}
+              onSelect={(selectedIndex) => setActiveIndex2(selectedIndex)}
+            >{/* Your content for the second column */}
+            <Carousel.Item>
+              <img
+                className="d-block w-100 carousel-img"
+                style={{ objectFit: 'contain' }}
+                src={somnanbule}
+                alt="Slide 1"
+              />
+            </Carousel.Item>
+            <Carousel.Item>
+              <img
+                className="d-block w-100 carousel-img"
+                style={{ objectFit: 'contain' }}
+                src={shycat}
+                alt="Slide 2"
+              />
+            </Carousel.Item>
+            <Carousel.Item>
+              <img
+                className="d-block w-100 carousel-img"
+                style={{ objectFit: 'contain' }}
+                src={waterhouse}
+                alt="Slide 3"
+              />
+            </Carousel.Item>
+            <Carousel.Item>
+              <img
+                className="d-block w-100 carousel-img"
+                style={{ objectFit: 'contain' }}
+                src={leanne}
+                alt="Slide 4"
+              />
+            </Carousel.Item>
+            <Carousel.Item>
+              <img
+                className="d-block w-100 carousel-img"
+                style={{ objectFit: 'contain' }}
+                src={fastbraces}
+                alt="Slide 5"
+              />
+            </Carousel.Item>
+            </Carousel></div>
         </Col>
       </Row>
     </Container>
