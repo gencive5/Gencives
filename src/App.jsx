@@ -8,7 +8,6 @@ import Col from 'react-bootstrap/Col';
 import Carousel from 'react-bootstrap/Carousel';
 import logo from './assets/logogencives.png';
 import somnanbule from './assets/images/somnanbule.jpg';
-import shycat from './assets/images/shycat.jpg';
 import waterhouse from './assets/images/waterhouse.jpg';
 import leanne from './assets/images/leanne.jpg';
 import fastbraces from './assets/images/fastbraces.jpg';
@@ -81,14 +80,7 @@ function App() {
                 alt="Slide 1"
               />
             </Carousel.Item>
-            <Carousel.Item>
-              <img
-                className="d-block w-100 carousel-img"
-                style={{ objectFit: 'contain' }}
-                src={shycat}
-                alt="Slide 2"
-              />
-            </Carousel.Item>
+           
             <Carousel.Item>
               <img
                 className="d-block w-100 carousel-img"
@@ -134,14 +126,7 @@ function App() {
                 alt="Slide 1"
               />
             </Carousel.Item>
-            <Carousel.Item>
-              <img
-                className="d-block w-100 carousel-img"
-                style={{ objectFit: 'contain' }}
-                src={shycat}
-                alt="Slide 2"
-              />
-            </Carousel.Item>
+            
             <Carousel.Item>
               <img
                 className="d-block w-100 carousel-img"
