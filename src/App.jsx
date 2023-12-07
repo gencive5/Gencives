@@ -11,7 +11,10 @@ import somnanbule from './assets/images/somnanbule.jpg';
 import waterhouse from './assets/images/waterhouse.jpg';
 import leanne from './assets/images/leanne.jpg';
 import fastbraces from './assets/images/fastbraces.jpg';
-
+import grass from './assets/images/touchgrass.jpg';
+import water from './assets/images/touchwater.jpg';
+import dress from './assets/images/touchleanne.jpg';
+import touch from './assets/images/touchtouch.jpg';
 
 function App() {
   const [activeIndex, setActiveIndex] = useState(0); // First carousel active index
@@ -105,6 +108,14 @@ function App() {
                 alt="Slide 5"
               />
             </Carousel.Item>
+            <Carousel.Item>
+              <img
+                className="d-block w-100 carousel-img"
+                style={{ objectFit: 'contain' }}
+                src={fastbraces}
+                alt="Slide 5"
+              />
+            </Carousel.Item>
           </Carousel>
           
         </Col>
@@ -122,7 +133,7 @@ function App() {
               <img
                 className="d-block w-100 carousel-img"
                 style={{ objectFit: 'contain' }}
-                src={somnanbule}
+                src={grass}
                 alt="Slide 1"
               />
             </Carousel.Item>
@@ -131,7 +142,7 @@ function App() {
               <img
                 className="d-block w-100 carousel-img"
                 style={{ objectFit: 'contain' }}
-                src={waterhouse}
+                src={water}
                 alt="Slide 3"
               />
             </Carousel.Item>
@@ -139,7 +150,7 @@ function App() {
               <img
                 className="d-block w-100 carousel-img"
                 style={{ objectFit: 'contain' }}
-                src={leanne}
+                src={dress}
                 alt="Slide 4"
               />
             </Carousel.Item>
@@ -147,7 +158,15 @@ function App() {
               <img
                 className="d-block w-100 carousel-img"
                 style={{ objectFit: 'contain' }}
-                src={fastbraces}
+                src={touch}
+                alt="Slide 5"
+              />
+            </Carousel.Item>
+            <Carousel.Item>
+              <img
+                className="d-block w-100 carousel-img"
+                style={{ objectFit: 'contain' }}
+                src={touch}
                 alt="Slide 5"
               />
             </Carousel.Item>
