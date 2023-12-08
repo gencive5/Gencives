@@ -57,7 +57,7 @@ function App() {
   return (
     <Container fluid className="custom-container main-zone">
       <Row>
-        <Col sm={8} className="d-flex align-items-center justify-content-center">
+        <Col sm={4} className="d-flex align-items-center justify-content-center">
           <img src={logo} alt="Logo" className="logo" />
           {/* Custom previous and next indicators */}
           <div className="mt-3 previousnext">
@@ -113,7 +113,7 @@ function App() {
           
         </Col>
 
-        <Col sm={4} className="d-none d-lg-block">
+        <Col sm={8}>
           {/* Touch zone for the second carousel */}
           <div className="touch-zone">
             <Carousel
@@ -121,10 +121,10 @@ function App() {
               activeIndex={activeIndex2}
               indicators={false}
               onSelect={(selectedIndex) => setActiveIndex2(selectedIndex)}
-            >{/* Your content for the second column */}
+            >
             <Carousel.Item>
               <img
-                className="d-block w-100 carousel-img"
+                className="d-block w-100 carousel-touch"
                 style={{ objectFit: 'contain' }}
                 src={grass}
                 alt="Slide 1"
@@ -133,7 +133,7 @@ function App() {
             
             <Carousel.Item>
               <img
-                className="d-block w-100 carousel-img"
+                className="d-block w-100 carousel-touch"
                 style={{ objectFit: 'contain' }}
                 src={water}
                 alt="Slide 2"
@@ -141,7 +141,7 @@ function App() {
             </Carousel.Item>
             <Carousel.Item>
               <img
-                className="d-block w-100 carousel-img"
+                className="d-block w-100 carousel-touch"
                 style={{ objectFit: 'contain' }}
                 src={dress}
                 alt="Slide 3"
@@ -149,7 +149,7 @@ function App() {
             </Carousel.Item>
             <Carousel.Item>
               <img
-                className="d-block w-100 carousel-img"
+                className="d-block w-100 carousel-touch"
                 style={{ objectFit: 'contain' }}
                 src={touch}
                 alt="Slide 4"

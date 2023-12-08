@@ -48,6 +48,14 @@
   align-items: center;
 }
 
+.carousel-touch {
+  width: 100%;
+  height: 600px;
+  object-fit: contain;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 
 /* Mobile-first approach */
