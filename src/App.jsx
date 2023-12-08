@@ -29,7 +29,7 @@ function App() {
       setTimeout(() => setCanScroll(true), 1800); // Adjust this timeout value as needed for the pause
 
       const delta = Math.sign(event.deltaY); // Get scroll direction (1 for down, -1 for up)
-      const newIndex = (activeIndex + delta + 5) % 5; // Total number of slides is 5
+      const newIndex = (activeIndex + delta + 4) % 4; // Total number of slides is 5
 
       setActiveIndex(newIndex);
       setActiveIndex2(newIndex);
@@ -89,7 +89,7 @@ function App() {
                 className="d-block w-100 carousel-img"
                 style={{ objectFit: 'contain' }}
                 src={waterhouse}
-                alt="Slide 3"
+                alt="Slide 2"
               />
             </Carousel.Item>
             <Carousel.Item>
@@ -97,25 +97,18 @@ function App() {
                 className="d-block w-100 carousel-img"
                 style={{ objectFit: 'contain' }}
                 src={leanne}
+                alt="Slide 3"
+              />
+            </Carousel.Item>
+            <Carousel.Item>
+              <img
+                className="d-block w-100 carousel-img"
+                style={{ objectFit: 'contain' }}
+                src={fastbraces}
                 alt="Slide 4"
               />
             </Carousel.Item>
-            <Carousel.Item>
-              <img
-                className="d-block w-100 carousel-img"
-                style={{ objectFit: 'contain' }}
-                src={fastbraces}
-                alt="Slide 5"
-              />
-            </Carousel.Item>
-            <Carousel.Item>
-              <img
-                className="d-block w-100 carousel-img"
-                style={{ objectFit: 'contain' }}
-                src={fastbraces}
-                alt="Slide 5"
-              />
-            </Carousel.Item>
+            
           </Carousel>
           
         </Col>
@@ -143,7 +136,7 @@ function App() {
                 className="d-block w-100 carousel-img"
                 style={{ objectFit: 'contain' }}
                 src={water}
-                alt="Slide 3"
+                alt="Slide 2"
               />
             </Carousel.Item>
             <Carousel.Item>
@@ -151,25 +144,18 @@ function App() {
                 className="d-block w-100 carousel-img"
                 style={{ objectFit: 'contain' }}
                 src={dress}
+                alt="Slide 3"
+              />
+            </Carousel.Item>
+            <Carousel.Item>
+              <img
+                className="d-block w-100 carousel-img"
+                style={{ objectFit: 'contain' }}
+                src={touch}
                 alt="Slide 4"
               />
             </Carousel.Item>
-            <Carousel.Item>
-              <img
-                className="d-block w-100 carousel-img"
-                style={{ objectFit: 'contain' }}
-                src={touch}
-                alt="Slide 5"
-              />
-            </Carousel.Item>
-            <Carousel.Item>
-              <img
-                className="d-block w-100 carousel-img"
-                style={{ objectFit: 'contain' }}
-                src={touch}
-                alt="Slide 5"
-              />
-            </Carousel.Item>
+            
             </Carousel></div>
         </Col>
       </Row>
