@@ -55,8 +55,25 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  
 }
 
+.touch-zone {
+  
+  background: linear-gradient(#fefafa, #f253ba);
+  
+  
+}
+
+
+.main-zone, .touch-zone {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+}
 
 /* Mobile-first approach */
 /* ... (other styles) */
@@ -77,6 +94,8 @@
   }
 
 }
+
+
 
 /* In your CSS file or style section */
 .carousel-control-prev,
