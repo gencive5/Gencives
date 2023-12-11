@@ -78,7 +78,7 @@ function App() {
             <Carousel.Item>
               <img
                 className="d-block w-100 carousel-img"
-                style={{ objectFit: 'contain' }}
+                
                 src={somnanbule}
                 alt="Slide 1"
               />
@@ -87,7 +87,7 @@ function App() {
             <Carousel.Item>
               <img
                 className="d-block w-100 carousel-img"
-                style={{ objectFit: 'contain' }}
+              
                 src={waterhouse}
                 alt="Slide 2"
               />
@@ -95,7 +95,7 @@ function App() {
             <Carousel.Item>
               <img
                 className="d-block w-100 carousel-img"
-                style={{ objectFit: 'contain' }}
+                
                 src={leanne}
                 alt="Slide 3"
               />
@@ -103,7 +103,7 @@ function App() {
             <Carousel.Item>
               <img
                 className="d-block w-100 carousel-img"
-                style={{ objectFit: 'contain' }}
+               
                 src={fastbraces}
                 alt="Slide 4"
               />
@@ -125,7 +125,7 @@ function App() {
             <Carousel.Item>
               <img
                 className="d-block w-100 carousel-touch"
-                style={{ objectFit: 'contain' }}
+                
                 src={grass}
                 alt="Slide 1"
               />
@@ -134,7 +134,7 @@ function App() {
             <Carousel.Item>
               <img
                 className="d-block w-100 carousel-touch"
-                style={{ objectFit: 'contain' }}
+               
                 src={water}
                 alt="Slide 2"
               />
@@ -142,7 +142,7 @@ function App() {
             <Carousel.Item>
               <img
                 className="d-block w-100 carousel-touch"
-                style={{ objectFit: 'contain' }}
+               
                 src={dress}
                 alt="Slide 3"
               />
@@ -150,7 +150,7 @@ function App() {
             <Carousel.Item>
               <img
                 className="d-block w-100 carousel-touch"
-                style={{ objectFit: 'contain' }}
+               
                 src={touch}
                 alt="Slide 4"
               />
