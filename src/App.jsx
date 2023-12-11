@@ -113,7 +113,7 @@ function App() {
           
         </Col>
 
-        <Col sm={8}className="d-flex align-items-center justify-content-center">
+        <Col className="d-flex align-items-center justify-content-center">
           {/* Touch zone for the second carousel */}
           <div className="touch-zone">
             <Carousel
