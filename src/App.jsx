@@ -55,9 +55,9 @@ function App() {
   };
 
   return (
-    <Container fluid className="custom-container main-zone">
+    <Container fluid className="custom-container">
       <Row>
-        <Col sm={4} className="d-flex align-items-center justify-content-center">
+        <Col sm={4} className="d-flex">
           <img src={logo} alt="Logo" className="logo" />
           {/* Custom previous and next indicators */}
           <div className="mt-3 previousnext">
@@ -68,6 +68,7 @@ function App() {
               next
             </button>
           </div>
+          <div className="main-zone">
           <Carousel
             interval={null}
             activeIndex={activeIndex}
@@ -110,10 +111,11 @@ function App() {
             </Carousel.Item>
             
           </Carousel>
+          </div>
           
         </Col>
 
-        <Col className="d-flex align-items-center justify-content-center">
+        <Col className="d-flex">
           {/* Touch zone for the second carousel */}
           <div className="touch-zone">
             <Carousel
