@@ -59,7 +59,9 @@ function App() {
       <Row>
         <Col sm={4} className="d-flex">
           <img src={logo} alt="Logo" className="logo" />
-          {/* Custom previous and next indicators */}
+         
+          <div className="main-zone">
+             {/* Custom previous and next indicators */}
           <div className="mt-3 previousnext">
             <button className="btn btn-primary" onClick={handlePrevious}>
               previous
@@ -68,7 +70,6 @@ function App() {
               next
             </button>
           </div>
-          <div className="main-zone">
           <Carousel
             interval={null}
             activeIndex={activeIndex}
