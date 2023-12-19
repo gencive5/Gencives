@@ -165,6 +165,9 @@
 
 .texte{
   font-family: 'airland';
-  /* Additional styles for the font if needed */
+  color: violet;
+  display: flex !important;
+  bottom: 3em !important;
+  position: absolute;
 }
 
