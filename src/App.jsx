@@ -78,7 +78,7 @@ function App() {
             activeIndex={activeIndex}
             indicators={false}
             onSelect={(selectedIndex) => setActiveIndex(selectedIndex)}
-            class="carousel slide transform carousel-fade"
+            className="carousel slide transform carousel-fade"
           >
             {/* Slides */}
             <Carousel.Item>
@@ -128,7 +128,7 @@ function App() {
               activeIndex={activeIndex2}
               indicators={false}
               onSelect={(selectedIndex) => setActiveIndex2(selectedIndex)}
-              class="carousel slide transform carousel-fade"
+              className="carousel slide transform carousel-fade"
             >
             <Carousel.Item>
               <img
