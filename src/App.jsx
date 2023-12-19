@@ -64,7 +64,7 @@ function App() {
              {/* Custom previous and next indicators */}
              
           <div className="mt-3 previousnext">
-          <p>scroll</p>
+          <p className="texte">scroll</p>
           
             <button className="btn btn-primary" onClick={handlePrevious}>
               previous

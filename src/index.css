@@ -52,12 +52,17 @@ button:focus-visible {
 
 
 
-
-
 .logo:hover {
   color: #535bf2;
   
 }
 
 
+@font-face {
+  font-family: 'airland';
+  src: local('airland'), url('assets/fonts/glyphworld-airland-webfont.woff') format('woff'), url('assets/fonts/glyphworld-airland-webfont.woff2') format('woff2');
+
+  font-weight: 300; /* Adjust font weight if necessary */
+  font-style: normal; /* Adjust font style if necessary */
+}
 
