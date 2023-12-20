@@ -16,6 +16,7 @@ import water from './assets/images/touchwater.jpg';
 import dress from './assets/images/touchleanne.jpg';
 import touch from './assets/images/touchtouch.jpg';
 
+
 function App() {
   const [activeIndex, setActiveIndex] = useState(0); // First carousel active index
   const [activeIndex2, setActiveIndex2] = useState(0); // Second carousel active index
@@ -42,17 +43,19 @@ function App() {
     };
   }, [activeIndex, activeIndex2, canScroll]);
 
+  
   const handlePrevious = () => {
-    const newActiveIndex = activeIndex === 0 ? 4 : activeIndex - 1;
+    const newActiveIndex = activeIndex === 0 ? 3 : activeIndex - 1; // Total number of slides is 4 (0 to 3)
     setActiveIndex(newActiveIndex);
     setActiveIndex2(newActiveIndex);
   };
-
+  
   const handleNext = () => {
-    const newActiveIndex = (activeIndex + 1) % 5;
+    const newActiveIndex = (activeIndex + 1) % 4; // Total number of slides is 4 (0 to 3)
     setActiveIndex(newActiveIndex);
     setActiveIndex2(newActiveIndex);
   };
+  
 
   return (
     <Container fluid className="custom-container">
@@ -61,17 +64,24 @@ function App() {
           <img src={logo} alt="Logo" className="logo" />
          
           <div className="main-zone">
-             {/* Custom previous and next indicators */}
+             
              <p className="texte">scroll</p>
+            
           <div className="mt-3 previousnext">
-                 
-            <button className="btn btn-primary" onClick={handlePrevious}>
-              previous
-            </button>
-            <button className="btn btn-primary" onClick={handleNext}>
-              next
-            </button>
-          </div>
+        
+        <button
+          className="custom-btn btn"
+          onClick={handlePrevious} >
+        <p>okey</p>
+        </button>
+        
+        <button
+          className="custom-btn btn"
+          onClick={handleNext} >
+          <p>okay</p>
+        </button>
+      </div>
+
           <Carousel
             interval={null}
             activeIndex={activeIndex}
