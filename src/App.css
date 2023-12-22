@@ -53,19 +53,11 @@
 }
 
 .carousel-item {
-  transition-duration: 1.5s;
+  transition: all 1s;
+  
 }
 
 
-.transform {
-  transition: 1s ease-in;
-  opacity: 90%;
-}
-
-.carousel-fade{
-  transition-duration:  1.5s;
-  opacity: 100%;
-}
 
 .carousel-img {
   width: 100%;
