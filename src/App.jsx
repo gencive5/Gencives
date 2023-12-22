@@ -78,7 +78,7 @@ function App() {
            <div>
           <p>okay</p>
         </div>
-          <img src={FlecheHaut} alt="Previous" />
+          <img className="arrows" src={FlecheHaut} alt="Previous" />
         </button>
         
         <button
