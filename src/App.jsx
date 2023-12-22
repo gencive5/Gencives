@@ -15,6 +15,8 @@ import grass from './assets/images/touchgrass.jpg';
 import water from './assets/images/touchwater.jpg';
 import dress from './assets/images/touchleanne.jpg';
 import touch from './assets/images/touchtouch.jpg';
+import FlecheHaut from './assets/flechehaut.svg';
+import FlecheBas from './assets/flechebas.svg';
 
 
 function App() {
@@ -61,6 +63,7 @@ function App() {
     <Container fluid className="custom-container">
       <Row>
         <Col sm={4} className="d-flex">
+        
           <img src={logo} alt="Logo" className="logo" />
          
           <div className="main-zone">
@@ -68,17 +71,21 @@ function App() {
              <p className="texte">scroll</p>
             
           <div className="mt-3 previousnext">
-        
+          
         <button
-          className="custom-btn btn"
+          className="custom-btn"
           onClick={handlePrevious} >
-        <p>okey</p>
+           <div>
+          <p>okay</p>
+        </div>
+          <img src={FlecheHaut} alt="Previous" />
         </button>
         
         <button
-          className="custom-btn btn"
+          className="custom-btn"
           onClick={handleNext} >
           <p>okay</p>
+          <img src={FlecheBas} alt="Next" />
         </button>
       </div>
 
