@@ -20,9 +20,9 @@
   .logo {
     align-items: center;
     position: absolute;
-    top:5%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+    top: 7%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     
   }
 }
@@ -157,7 +157,7 @@
 
 .texte{
   font-family: 'airland';
-  color: violet;
+  color: #ff4d7a;
   display: flex !important;
   bottom: 3em !important;
   position: absolute;
@@ -167,7 +167,7 @@
 .custom-btn {
   /* Reset Bootstrap button styles */
   
-  padding: 1em;
+  padding: 0.5em;
   margin: 0;
   cursor: pointer;
   bottom: 5em !important;
@@ -188,6 +188,3 @@
   }
 }
 
-.arrows {
-  size:1em;
-}

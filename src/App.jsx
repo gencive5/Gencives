@@ -78,14 +78,14 @@ function App() {
            <div>
           <p>okay</p>
         </div>
-          <img className="arrows" src={FlecheHaut} alt="Previous" />
+          <img style={{ height: 20}} src={FlecheHaut} alt="Previous" />
         </button>
         
         <button
           className="custom-btn"
           onClick={handleNext} >
           <p>okay</p>
-          <img src={FlecheBas} alt="Next" />
+          <img style={{ height: 20}} src={FlecheBas} alt="Next" />
         </button>
       </div>
 
