@@ -62,7 +62,7 @@ function App() {
   return (
     <Container fluid className="custom-container">
       <Row>
-        <Col sm={4} className="d-flex">
+        <Col sm={4}>
         
           <img src={logo} alt="Logo" className="logo" />
          
@@ -136,7 +136,7 @@ function App() {
           
         </Col>
 
-        <Col className="d-flex">
+        <Col>
           {/* Touch zone for the second carousel */}
           <div className="touch-zone">
             <Carousel
@@ -148,7 +148,7 @@ function App() {
             >
             <Carousel.Item>
               <img
-                className="d-block w-100 carousel-touch"
+                className="carousel-touch"
                 
                 src={grass}
                 alt="Slide 1"
@@ -157,7 +157,7 @@ function App() {
             
             <Carousel.Item>
               <img
-                className="d-block w-100 carousel-touch"
+                className="carousel-touch"
                
                 src={water}
                 alt="Slide 2"
@@ -165,7 +165,7 @@ function App() {
             </Carousel.Item>
             <Carousel.Item>
               <img
-                className="d-block w-100 carousel-touch"
+                className="carousel-touch"
                
                 src={dress}
                 alt="Slide 3"
@@ -173,7 +173,7 @@ function App() {
             </Carousel.Item>
             <Carousel.Item>
               <img
-                className="d-block w-100 carousel-touch"
+                className="carousel-touch"
                
                 src={touch}
                 alt="Slide 4"

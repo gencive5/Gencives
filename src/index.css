@@ -28,6 +28,8 @@ body, html {
   width:100%;
   background-color: #fcfcfc;
   overflow: hidden;
+  margin: 0;
+  padding: 0;
 }
 
 
