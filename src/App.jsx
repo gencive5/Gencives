@@ -15,9 +15,8 @@ import grass from './assets/images/touchgrass.jpg';
 import water from './assets/images/touchwater.jpg';
 import dress from './assets/images/touchleanne.jpg';
 import touch from './assets/images/touchtouch.jpg';
-import FlecheHaut from './assets/flechehaut.svg';
-import FlecheBas from './assets/flechebas.svg';
 import NavigationButtons from './components/NavigationButtons';
+import FirstCarousel from './components/FirstCarousel';
 
 
 
@@ -67,52 +66,10 @@ function App() {
           <img src={logo} alt="Logo" className="logo" />
           <div className="main-zone">
             <p className="texte">scroll</p>
-            {/* Integration of NavigationButtons component */}
+            
             <NavigationButtons handlePrevious={handlePrevious} handleNext={handleNext} />
 
-          <Carousel
-            interval={null}
-            activeIndex={activeIndex}
-            indicators={false}
-            onSelect={(selectedIndex) => setActiveIndex(selectedIndex)}
-            className="carousel slide transform carousel-fade"
-          >
-            {/* Slides */}
-            <Carousel.Item>
-              <img
-                className="d-block w-100 carousel-img"
-                
-                src={somnanbule}
-                alt="Slide 1"
-              />
-            </Carousel.Item>
-           
-            <Carousel.Item>
-              <img
-                className="d-block w-100 carousel-img"
-              
-                src={waterhouse}
-                alt="Slide 2"
-              />
-            </Carousel.Item>
-            <Carousel.Item>
-              <img
-                className="d-block w-100 carousel-img"
-                
-                src={leanne}
-                alt="Slide 3"
-              />
-            </Carousel.Item>
-            <Carousel.Item>
-              <img
-                className="d-block w-100 carousel-img"
-               
-                src={fastbraces}
-                alt="Slide 4"
-              />
-            </Carousel.Item>
-            
-          </Carousel>
+            <FirstCarousel activeIndex={activeIndex} setActiveIndex={setActiveIndex} />
           </div>
           
         </Col>
