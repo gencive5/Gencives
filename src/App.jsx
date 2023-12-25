@@ -17,6 +17,9 @@ import dress from './assets/images/touchleanne.jpg';
 import touch from './assets/images/touchtouch.jpg';
 import FlecheHaut from './assets/flechehaut.svg';
 import FlecheBas from './assets/flechebas.svg';
+import NavigationButtons from './components/NavigationButtons';
+
+
 
 
 function App() {
@@ -45,7 +48,6 @@ function App() {
     };
   }, [activeIndex, activeIndex2, canScroll]);
 
-  
   const handlePrevious = () => {
     const newActiveIndex = activeIndex === 0 ? 3 : activeIndex - 1; // Total number of slides is 4 (0 to 3)
     setActiveIndex(newActiveIndex);
@@ -57,37 +59,16 @@ function App() {
     setActiveIndex(newActiveIndex);
     setActiveIndex2(newActiveIndex);
   };
-  
 
   return (
     <Container fluid className="custom-container">
       <Row>
         <Col sm={4}>
-        
           <img src={logo} alt="Logo" className="logo" />
-         
           <div className="main-zone">
-             
-             <p className="texte">scroll</p>
-            
-          <div className="mt-3 previousnext">
-          
-        <button
-          className="custom-btn"
-          onClick={handlePrevious} >
-           <div>
-          <p>okay</p>
-        </div>
-          <img style={{ height: 20}} src={FlecheHaut} alt="Previous" />
-        </button>
-        
-        <button
-          className="custom-btn"
-          onClick={handleNext} >
-          <p>okay</p>
-          <img style={{ height: 20}} src={FlecheBas} alt="Next" />
-        </button>
-      </div>
+            <p className="texte">scroll</p>
+            {/* Integration of NavigationButtons component */}
+            <NavigationButtons handlePrevious={handlePrevious} handleNext={handleNext} />
 
           <Carousel
             interval={null}
