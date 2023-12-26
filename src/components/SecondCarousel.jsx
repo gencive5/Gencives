@@ -4,6 +4,8 @@ import grass from '../assets/images/touchgrass.jpg';
 import water from '../assets/images/touchwater.jpg';
 import dress from '../assets/images/touchleanne.jpg';
 import touch from '../assets/images/touchtouch.jpg';
+import { Curtains, Plane } from 'curtainsjs';
+
 
 function SecondCarousel({ activeIndex2, setActiveIndex2 }) {
   return (
@@ -32,3 +34,5 @@ function SecondCarousel({ activeIndex2, setActiveIndex2 }) {
 }
 
 export default SecondCarousel;
+
+
