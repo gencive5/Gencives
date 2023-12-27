@@ -6,11 +6,17 @@ function CurtainsComponent({ images }) {
   const planeRefs = useRef([]);
 
   useEffect(() => {
+
+    console.log('CurtainsComponent useEffect');
+
     const curtains = new Curtains({
       // Configure curtains instance here as needed
     });
 
     images.forEach((imageSrc) => {
+
+      console.log('Creating plane for image:', imageSrc);
+
       const plane = new Plane(curtains, {
         // Configure planes for images
         texturesOptions: {
@@ -25,6 +31,9 @@ function CurtainsComponent({ images }) {
     curtainsRef.current = curtains;
 
     return () => {
+
+      console.log('CurtainsComponent cleanup');
+
       curtains.dispose();
     };
   }, [images]);

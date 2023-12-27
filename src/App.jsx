@@ -8,7 +8,9 @@ import Col from 'react-bootstrap/Col';
 import logo from './assets/logogencives.png';
 import NavigationButtons from './components/NavigationButtons';
 import FirstCarousel from './components/FirstCarousel';
-import SecondCarousel from './components/SecondCarousel';
+
+import CombinedComponent from './components/CombinedComponent';
+
 
 
 
@@ -68,7 +70,7 @@ function App() {
         <Col>
           {/* Touch zone for the second carousel */}
           <div className="touch-zone">
-          <SecondCarousel activeIndex2={activeIndex2} setActiveIndex2={setActiveIndex2} />
+          <CombinedComponent images={images} />
           </div>
         </Col>
       </Row>
