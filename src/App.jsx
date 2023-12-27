@@ -11,6 +11,10 @@ import FirstCarousel from './components/FirstCarousel';
 
 import CombinedComponent from './components/CombinedComponent';
 
+import grass from './assets/images/touchgrass.jpg';
+import water from './assets/images/touchwater.jpg';
+import dress from './assets/images/touchleanne.jpg';
+import touch from './assets/images/touchtouch.jpg';
 
 
 
@@ -51,6 +55,10 @@ function App() {
     setActiveIndex(newActiveIndex);
     setActiveIndex2(newActiveIndex);
   };
+  
+
+  const images = [grass, water, dress, touch];
+
 
   return (
     <Container fluid className="custom-container">
