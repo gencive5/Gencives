@@ -9,7 +9,7 @@ import logo from './assets/logogencives.png';
 import NavigationButtons from './components/NavigationButtons';
 import FirstCarousel from './components/FirstCarousel';
 
-import CombinedComponent from './components/CombinedComponent';
+import SecondCarousel from './components/SecondCarousel';
 
 import grass from './assets/images/touchgrass.jpg';
 import water from './assets/images/touchwater.jpg';
@@ -78,7 +78,7 @@ function App() {
         <Col>
           {/* Touch zone for the second carousel */}
           <div className="touch-zone">
-          <CombinedComponent images={images} />
+          <SecondCarousel activeIndex2={activeIndex2} setActiveIndex2={setActiveIndex2} />
           </div>
         </Col>
       </Row>
