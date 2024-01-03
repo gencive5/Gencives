@@ -3,22 +3,24 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import './index.css';
 import Container from 'react-bootstrap/Container';
-import Row from 'react-bootstrap/Row';
+{/*import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import logo from './assets/logogencives.png';
 import NavigationButtons from './components/NavigationButtons';
 import FirstCarousel from './components/FirstCarousel';
 
-import SecondCarousel from './components/SecondCarousel'; 
+import SecondCarousel from './components/SecondCarousel'; */}
 
 import grass from './assets/images/touchgrass.jpg';
 import water from './assets/images/touchwater.jpg';
 import dress from './assets/images/touchleanne.jpg';
 import touch from './assets/images/touchtouch.jpg';
 
+import Flowmap from "./components/Flowmap";
 
 
 
+{/*
 
 function App() {
   const [activeIndex, setActiveIndex] = useState(0); // First carousel active index
@@ -59,12 +61,19 @@ function App() {
   };
   
 
-  const images = [grass, water, dress, touch];
+  const images = [grass, water, dress, touch]; */}
 
+  export default function App() {
 
   return (
+
+    <div className="App">
+
     <Container fluid className="custom-container">
-      <Row>
+
+<Flowmap />
+
+      {/* <Row>
         <Col sm={4}>
            <img src={logo} alt="Logo" className="logo" />
           <div className="main-zone">
@@ -81,17 +90,19 @@ function App() {
 
         <Col>
           {/* Touch zone for the second carousel */}
-          <div className="touch-zone">
+         {/* <div className="touch-zone">
           <SecondCarousel activeIndex2={activeIndex2} setActiveIndex2={setActiveIndex2} />
           </div>
         
         </Col>
-      </Row>
+      </Row> */}
     </Container>
+
+    </div>
   );
 }
 
-export default App;
+{/*export default App; */}
 
 
 
