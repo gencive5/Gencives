@@ -9,12 +9,14 @@ import logo from './assets/logogencives.png';
 import NavigationButtons from './components/NavigationButtons';
 import FirstCarousel from './components/FirstCarousel';
 
-import SecondCarousel from './components/SecondCarousel';
+import SecondCarousel from './components/SecondCarousel'; 
 
 import grass from './assets/images/touchgrass.jpg';
 import water from './assets/images/touchwater.jpg';
 import dress from './assets/images/touchleanne.jpg';
 import touch from './assets/images/touchtouch.jpg';
+
+
 
 
 
@@ -64,13 +66,15 @@ function App() {
     <Container fluid className="custom-container">
       <Row>
         <Col sm={4}>
-          <img src={logo} alt="Logo" className="logo" />
+           <img src={logo} alt="Logo" className="logo" />
           <div className="main-zone">
             <p className="texte">scroll</p>
             
             <NavigationButtons handlePrevious={handlePrevious} handleNext={handleNext} />
 
-            <FirstCarousel activeIndex={activeIndex} setActiveIndex={setActiveIndex} />
+            <FirstCarousel activeIndex={activeIndex} setActiveIndex={setActiveIndex} /> 
+
+            
           </div>
           
         </Col>
@@ -80,6 +84,7 @@ function App() {
           <div className="touch-zone">
           <SecondCarousel activeIndex2={activeIndex2} setActiveIndex2={setActiveIndex2} />
           </div>
+        
         </Col>
       </Row>
     </Container>
