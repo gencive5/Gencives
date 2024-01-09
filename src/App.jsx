@@ -1,18 +1,20 @@
-import React, { useState, useEffect } from 'react';
-import 'bootstrap/dist/css/bootstrap.min.css';
+import React from 'react';
+
+import './styles.css';
+
+import Flowmap from "./components/Flowmap.jsx";
+
+{/*import Container from 'react-bootstrap/Container';
 import './App.css';
 import './index.css';
-import Container from 'react-bootstrap/Container';
-{/*import Row from 'react-bootstrap/Row';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import logo from './assets/logogencives.png';
 import NavigationButtons from './components/NavigationButtons';
 import FirstCarousel from './components/FirstCarousel';
 
 import SecondCarousel from './components/SecondCarousel'; */}
-
-
-import Flowmap from "./components/Flowmap.jsx";
 
 
 
@@ -65,11 +67,16 @@ function App() {
 
     <div className="App">
 
-    <Container fluid className="custom-container">
+    <div className="container">
 
-<Flowmap />
+   
+    <Flowmap />
 
-      {/* <Row>
+
+      {/* 
+     
+
+      <Row>
         <Col sm={4}>
            <img src={logo} alt="Logo" className="logo" />
           <div className="main-zone">
@@ -92,7 +99,7 @@ function App() {
         
         </Col>
       </Row> */}
-    </Container>
+    </div>
 
     </div>
   );
