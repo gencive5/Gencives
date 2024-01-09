@@ -1,21 +1,26 @@
-// NavigationButtons.jsx
+
+
 import React from 'react';
 import FlecheHaut from '../assets/flechehaut.svg';
 import FlecheBas from '../assets/flechebas.svg';
+import '../App.css';
+
 
 function NavigationButtons({ handlePrevious, handleNext }) {
   return (
-    <div className="previousnext">
+    <div className="mt-3 previousnext">
       <button className="custom-btn" onClick={handlePrevious}>
         <div>
-          <p>okay</p>
+          <p>Previous</p>
+          <img style={{ height: 20 }} src={FlecheHaut} alt="Previous" />
         </div>
-        <img style={{ height: 20 }} src={FlecheHaut} alt="Previous" />
       </button>
 
       <button className="custom-btn" onClick={handleNext}>
-        <p>okay</p>
-        <img style={{ height: 20 }} src={FlecheBas} alt="Next" />
+        <div>
+          <p>Next</p>
+          <img style={{ height: 20 }} src={FlecheBas} alt="Next" />
+        </div>
       </button>
     </div>
   );
