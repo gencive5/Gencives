@@ -5,11 +5,11 @@ import {
   flowmapFs,
   displacementVs,
   displacementFs
-} from "../../shaders/shaders";
+} from "../shaders/shaders";
 import { Vec2 } from "curtainsjs";
 import * as dat from "lil-gui";
 
-import "./components/index.css";
+import "./indexx.css";
 
 function Flowmap() {
   const mouse = useRef(new Vec2());
@@ -289,7 +289,7 @@ function Flowmap() {
         onReady={onReady}
       >
         <img
-          src="/images/mirage-header.png"
+          src="/images/test.png"
           data-sampler="uRenderTexture"
           alt=""
         />

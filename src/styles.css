@@ -18,8 +18,7 @@ body {
     pointer-events: none;
   }
   
-  .container {
-  }
+
   
   .persona_section {
     padding: 200px 0;
@@ -30,8 +29,6 @@ body {
     color: #121515;
   }
   
-  .persona_section img {
-  }
   
   .persona_section h2 {
     font-size: 3rem;
