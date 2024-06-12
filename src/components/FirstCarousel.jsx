@@ -1,8 +1,8 @@
 import React from 'react';
 import Carousel from 'react-bootstrap/Carousel';
 import somnanbule from '../assets/images/somnanbule.jpg';
-import waterhouse from '../assets/images/waterhouse.jpg';
-import leanne from '../assets/images/leanne.jpg';
+import kontrolle from '../assets/images/kontrolle.jpg';
+import adelia from '../assets/images/adelia.jpg';
 import fastbraces from '../assets/images/fastbraces.jpg';
 
 function FirstCarousel({ activeIndex, setActiveIndex }) {
@@ -25,14 +25,14 @@ function FirstCarousel({ activeIndex, setActiveIndex }) {
       <Carousel.Item>
         <img
           className="d-block w-100 carousel-img"
-          src={waterhouse}
+          src={kontrolle}
           alt="Slide 2"
         />
       </Carousel.Item>
       <Carousel.Item>
         <img
           className="d-block w-100 carousel-img"
-          src={leanne}
+          src={adelia}
           alt="Slide 3"
         />
       </Carousel.Item>
