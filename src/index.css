@@ -68,3 +68,12 @@ button:focus-visible {
   font-style: normal; /* Adjust font style if necessary */
 }
 
+
+@font-face {
+  font-family: 'pixel';
+  src: local('pixel'), url('assets/fonts/pixeloperator8-bold-webfont.woff') format('woff'), url('assets/fonts/pixeloperator8-bold-webfont.woff2') format('woff2');
+
+  font-weight: 300; /* Adjust font weight if necessary */
+  font-style: normal; /* Adjust font style if necessary */
+}
+

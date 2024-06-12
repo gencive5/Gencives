@@ -1,5 +1,3 @@
-
-
 import React from 'react';
 import FlecheHaut from '../assets/flechehaut.svg';
 import FlecheBas from '../assets/flechebas.svg';
