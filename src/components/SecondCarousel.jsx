@@ -1,9 +1,9 @@
 import React from 'react';
 import Carousel from 'react-bootstrap/Carousel';
-import grass from '../assets/images/touchgrass.jpg';
+import grass from '../assets/images/touchcesare.jpg';
 import kontrolle from '../assets/images/touchkontrolle.jpg';
 import adelia from '../assets/images/touchadelia.jpg';
-import touch from '../assets/images/touchtouch.jpg';
+import usa from '../assets/images/touchusa.jpg';
 
 
 
@@ -27,7 +27,7 @@ function SecondCarousel({ activeIndex2, setActiveIndex2 }) {
         <img className="carousel-touch" src={adelia} alt="Slide 3" />
       </Carousel.Item>
       <Carousel.Item>
-        <img className="carousel-touch" src={touch} alt="Slide 4" />
+        <img className="carousel-touch" src={usa} alt="Slide 4" />
       </Carousel.Item>
     </Carousel>
   );

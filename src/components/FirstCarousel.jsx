@@ -3,7 +3,7 @@ import Carousel from 'react-bootstrap/Carousel';
 import somnanbule from '../assets/images/somnanbule.jpg';
 import kontrolle from '../assets/images/kontrolle.jpg';
 import adelia from '../assets/images/adelia.jpg';
-import fastbraces from '../assets/images/fastbraces.jpg';
+import usa from '../assets/images/usa.jpg';
 
 function FirstCarousel({ activeIndex, setActiveIndex }) {
   return (
@@ -39,7 +39,7 @@ function FirstCarousel({ activeIndex, setActiveIndex }) {
       <Carousel.Item>
         <img
           className="d-block w-100 carousel-img"
-          src={fastbraces}
+          src={usa}
           alt="Slide 4"
         />
       </Carousel.Item>
