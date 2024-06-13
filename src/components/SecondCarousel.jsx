@@ -3,7 +3,7 @@ import Carousel from 'react-bootstrap/Carousel';
 import grass from '../assets/images/touchcesare.jpg';
 import kontrolle from '../assets/images/touchkontrolle.jpg';
 import adelia from '../assets/images/touchadelia.jpg';
-import usa from '../assets/images/touchusa.jpg';
+import usa from '../assets/images/touchusa9.jpg';
 
 
 
