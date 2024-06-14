@@ -5,7 +5,7 @@ import './index.css';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import logo from './assets/logogencives.png';
+import logo from './assets/logogencives2.png';
 import NavigationButtons from './components/NavigationButtons';
 import FirstCarousel from './components/FirstCarousel';
 import SecondCarousel from './components/SecondCarousel';
@@ -54,7 +54,7 @@ function App() {
     <Container fluid className="custom-container">
       <Row>
         <Col sm={4}>
-          <img src={logo} alt="Logo" className="logo" />
+        <div class="blush-container"><img src={logo} alt="Logo" className="logo" /></div>
           <div className="main-zone">
             <p className="texte">scroll</p>
             

@@ -7,13 +7,12 @@
 
 
 .logo {
-  height: 12em;
+  height: auto;
   padding: 1.2em;
-  will-change: filter;
-  transition: filter 300ms;
   position: absolute;
   top: 0;
   left: 0;
+  width: 80%;
  }
 
  @media (max-width: 768px) {
@@ -22,30 +21,19 @@
     justify-content: center;
     align-items: center;
     position: absolute;
-    top: 0%;
+    top: 0;
     left: 50%;
     transform: translate(-50%, 0);
-    width: 100%;
+    width: 50%;
   }
 
   .logo {
-    width: 120%;
+    width: 80%;
     height: auto;
     object-fit: contain;
   }
 }
 
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-
-.glow {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-
-.glow.react {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
 
 .custom-container {
 
