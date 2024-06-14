@@ -5,11 +5,11 @@ import './index.css';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import logo from './assets/logogencives2.png';
+import BlushingLogo from './components/BlushingLogo'; 
 import NavigationButtons from './components/NavigationButtons';
 import FirstCarousel from './components/FirstCarousel';
 import SecondCarousel from './components/SecondCarousel';
-
+//import logo from './assets/logogencives2.png';
 
 
 function App() {
@@ -56,7 +56,8 @@ function App() {
         <Col sm={4}>
         
           <div className="main-zone">
-          <div class="blush-container"><img src={logo} alt="Logo" className="logo" /></div>
+          {/*<div class="logo-container"><img src={logo} alt="Logo" className="logo" /></div> */}
+          <BlushingLogo /> 
             <p className="texte">scroll</p>
             
             <NavigationButtons handlePrevious={handlePrevious} handleNext={handleNext} />
