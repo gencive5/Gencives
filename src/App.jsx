@@ -54,8 +54,9 @@ function App() {
     <Container fluid className="custom-container">
       <Row>
         <Col sm={4}>
-        <div class="blush-container"><img src={logo} alt="Logo" className="logo" /></div>
+        
           <div className="main-zone">
+          <div class="blush-container"><img src={logo} alt="Logo" className="logo" /></div>
             <p className="texte">scroll</p>
             
             <NavigationButtons handlePrevious={handlePrevious} handleNext={handleNext} />
