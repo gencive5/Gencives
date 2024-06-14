@@ -17,16 +17,7 @@
  }
 
  @media (max-width: 768px) {
-  .logo-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translate(-50%, 0);
-    width: 100%;
-  }
+  
 
   .logo {
     width: 299px;
