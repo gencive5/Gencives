@@ -158,10 +158,12 @@
 
 .texte{
   font-family: 'pixel';
-  color: #ff4d7a;
+  color: #ed0841;
   display: flex !important;
   bottom: 3em !important;
   position: absolute;
+  font-weight: 100;
+
 }
 
 /* Custom button styles */
