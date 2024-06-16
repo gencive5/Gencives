@@ -29,8 +29,8 @@
 .logo-container::after {
   content: '';
   position: absolute;
-  width: 100px; 
-  height: 100px; 
+  width: 40px; 
+  height: 40px; 
   background: rgba(255, 0, 0, 0.5);
   border-radius: 50%;
   top: 50%;
@@ -39,14 +39,15 @@
   transition: opacity 0.3s ease;
   z-index: 50; 
   pointer-events: none; 
+  filter: blur(15px);
 }
 
 .logo-container::before {
-  left: 10%; 
+  left: 12%; 
 }
 
 .logo-container::after {
-  right: 10%; 
+  right: 2%; 
 }
 
 .logo-container:hover::before,
