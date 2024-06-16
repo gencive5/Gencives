@@ -1,6 +1,6 @@
 import React from 'react';
-import ArrowTop from '../assets/arrowtop.svg';
-import ArrowBottom from '../assets/arrowbottom.svg';
+import ArrowTop from '../assets/arrowhaut.svg';
+import ArrowBottom from '../assets/arrowbas.svg';
 import '../App.css';
 
 
@@ -10,14 +10,14 @@ function NavigationButtons({ handlePrevious, handleNext }) {
       <button className="custom-btn" onClick={handlePrevious}>
         <div>
           
-          <img style={{ height: 15 }} src={ArrowTop} alt="Previous" />
+          <img style={{ height: 10 }} src={ArrowTop} alt="Previous" />
         </div>
       </button>
 
       <button className="custom-btn" onClick={handleNext}>
         <div>
           
-          <img style={{ height: 15 }} src={ArrowBottom} alt="Next" />
+          <img style={{ height: 10 }} src={ArrowBottom} alt="Next" />
         </div>
       </button>
     </div>
