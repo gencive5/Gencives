@@ -247,3 +247,17 @@
   text-align: center;
   z-index: 1000;
 }
+
+.col-first {
+  width: 768px; /* Adjust this value based on your preferred mobile width */
+  flex: 0 0 768px; /* Ensure it stays the same width */
+}
+
+.col-second {
+  flex: 1; /* Allow this column to take the remaining space */
+  overflow: hidden; /* Prevent overflow */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
