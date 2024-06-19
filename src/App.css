@@ -19,7 +19,7 @@
 .logo {
   height: auto;
   width: 100%;
-  transition: all 0.3s ease; 
+  transition: all 0.3s ease;
   display: block;
 }
 
@@ -27,25 +27,25 @@
 .logo-container::after {
   content: '';
   position: absolute;
-  width: 40px; 
-  height: 40px; 
+  width: 40px;
+  height: 40px;
   background: rgba(255, 0, 0, 0.5);
   border-radius: 50%;
   top: 50%;
   transform: translateY(-50%);
   opacity: 0;
   transition: opacity 0.3s ease;
-  z-index: 50; 
-  pointer-events: none; 
+  z-index: 50;
+  pointer-events: none;
   filter: blur(15px);
 }
 
 .logo-container::before {
-  left: 10%; 
+  left: 10%;
 }
 
 .logo-container::after {
-  right: 10%; 
+  right: 10%;
 }
 
 .logo-container:hover::before,
@@ -57,7 +57,7 @@
 
 .custom-container {
   height: 100vh;
-  width: 100%;  
+  width: 100%;
   margin: 0;
   padding: 0;
 }
@@ -114,6 +114,9 @@
   justify-content: center;
   margin: 0;
   padding: 0;
+  position: relative;
+  top: 0;
+  left: 0;
 }
 
 .touch-zone {
@@ -159,7 +162,6 @@
 @media (max-width: 768px) {
   .previousnext {
     z-index: 1000;
-    bottom: 1em !important;
     position: absolute;
     align-items: center;
     justify-content: center;
@@ -249,13 +251,13 @@
 }
 
 .col-first {
-  width: 768px; /* Adjust this value based on your preferred mobile width */
-  flex: 0 0 768px; /* Ensure it stays the same width */
+  width: 520px;
+  flex: 0 0 520px;
 }
 
 .col-second {
-  flex: 1; /* Allow this column to take the remaining space */
-  overflow: hidden; /* Prevent overflow */
+  flex: 1;
+  overflow: hidden;
   display: flex;
   flex-direction: column;
   align-items: center;
