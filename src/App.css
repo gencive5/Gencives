@@ -247,3 +247,47 @@
   margin-right: 0;
   margin-left: 0;
 }
+
+.contact-container {
+  position: fixed;
+  bottom: 10px;
+  left: 10px;
+  z-index: 1000; /* Ensure it is on top of other elements */
+}
+
+.contact-button {
+  font-family: 'abc';
+  background-color: transparent;
+  color: #ed0841;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+ 
+}
+
+.contact-button:hover {
+  background-color: #ed0841;
+  border-radius: 0%;
+}
+
+.contact-text {
+  font-family: 'abc';
+  margin-top: 10px;
+  background-color: #ed0841;
+  padding: 10px;
+  border: 1px solid #ddd;
+
+}
+
+.contact-text-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #f8f9fa;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  text-align: center;
+  z-index: 1000; /* Ensure it appears above other elements */
+}

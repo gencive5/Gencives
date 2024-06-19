@@ -16,6 +16,7 @@ function App() {
   const [activeIndex, setActiveIndex] = useState(0); // First carousel active index
   const [activeIndex2, setActiveIndex2] = useState(0); // Second carousel active index
   const [canScroll, setCanScroll] = useState(true);
+  const [showContact, setShowContact] = useState(false);
 
   useEffect(() => {
     const handleScroll = (event) => {
@@ -50,6 +51,10 @@ function App() {
     setActiveIndex2(newActiveIndex);
   };
 
+  const toggleContact = () => {
+    setShowContact(!showContact);
+  };
+
   return (
     <Container fluid className="custom-container">
       <Row>
@@ -65,7 +70,19 @@ function App() {
             
             <NavigationButtons handlePrevious={handlePrevious} handleNext={handleNext} />
 
+            {showContact && (
+              <div className="contact-text-container">
+                <p className="contact-text">This is the contact text.</p>
+              </div>
+            )}
+
             <FirstCarousel activeIndex={activeIndex} setActiveIndex={setActiveIndex} />
+
+            <div className="contact-container">
+              <button className="contact-button" onClick={toggleContact}>contact</button>
+              
+            </div>
+
           </div>
           
         </Col>
