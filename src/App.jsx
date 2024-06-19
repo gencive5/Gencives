@@ -11,7 +11,6 @@ import SecondCarousel from './components/SecondCarousel';
 import logo from './assets/logogencives2.png';
 //import BlushingLogo from './components/BlushingLogo';//
 
-
 function App() {
   const [activeIndex, setActiveIndex] = useState(0); // First carousel active index
   const [activeIndex2, setActiveIndex2] = useState(0); // Second carousel active index
@@ -26,7 +25,7 @@ function App() {
       setTimeout(() => setCanScroll(true), 1800); // Adjust this timeout value as needed for the pause
 
       const delta = Math.sign(event.deltaY); // Get scroll direction (1 for down, -1 for up)
-      const newIndex = (activeIndex + delta + 4) % 4; // Total number of slides is 5
+      const newIndex = (activeIndex + delta + 4) % 4; // Total number of slides is 4
 
       setActiveIndex(newIndex);
       setActiveIndex2(newIndex);
@@ -58,26 +57,20 @@ function App() {
   return (
     <Container fluid className="custom-container">
       <Row>
-        <Col sm={4} d-block>
-        
+        <Col sm={4}>
           <div className="main-zone">
-          <div className="logo-container">
+            <div className="logo-container">
               <img src={logo} alt="Logo" className="logo" />
             </div>
-          {/* <BlushingLogo /> */}
-         
+            {/* <BlushingLogo /> */}
             <p className="texte">scroll</p>
-            
             <NavigationButtons handlePrevious={handlePrevious} handleNext={handleNext} />
-
             {showContact && (
               <div className="contact-text-container">
-                <p className="contact-text">@gencive5 <br></br>vic.segen@gmail.com</p>
+                <p className="contact-text">@gencive5 <br/>vic.segen@gmail.com</p>
               </div>
             )}
-
             <FirstCarousel activeIndex={activeIndex} setActiveIndex={setActiveIndex} />
-
             <div className="contact-container">
               <button
                 className={`contact-button ${showContact ? 'active' : ''}`}
@@ -86,15 +79,11 @@ function App() {
                 contact
               </button>
             </div>
-
           </div>
-          
         </Col>
-
-        <Col d-sm-none>
-          {/* Touch zone for the second carousel */}
+        <Col>
           <div className="touch-zone">
-          <SecondCarousel activeIndex2={activeIndex2} setActiveIndex2={setActiveIndex2} />
+            <SecondCarousel activeIndex2={activeIndex2} setActiveIndex2={setActiveIndex2} />
           </div>
         </Col>
       </Row>

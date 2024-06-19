@@ -1,10 +1,8 @@
 #root {
-  
   margin: 0;
   padding: 0;
   text-align: center;
 }
-
 
 .logo-container {
   position: absolute;
@@ -57,34 +55,41 @@
   opacity: 1;
 }
 
-
 .custom-container {
   height: 100vh;
   width: 100%;  
   margin: 0;
   padding: 0;
-  
 }
 
 .carousel {
-  max-height: 100vh;
-  width: 100%; /* Ensure it doesn't overflow */
-  overflow: hidden; /* Hide any overflowing content */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  overflow: hidden;
+}
+
+.carousel-item-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
 }
 
 .carousel-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   transition: all 1s;
 }
-
 
 .carousel-img {
   width: auto;
   height: 429px;
-  object-fit: contain; /* Maintain aspect ratio without distortion */
-  object-position: center; /* Position the image within the container */
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  object-fit: contain;
+  object-position: center;
 }
 
 .carousel-touch {
@@ -95,16 +100,16 @@
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
-  margin: 0; /* Remove margin */
-  padding: 0; /* Remove padding */
-  overflow: hidden; /* Ensure no unexpected overflow */
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
 }
-
 
 .main-zone {
   height: 100vh;
   width: 100%;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   margin: 0;
@@ -117,24 +122,17 @@
   display: flex;
   align-items: flex-end;
   justify-content: flex-end;
-  margin: 0; /* Remove margin */
-  padding: 0; /* Remove padding */
-  overflow: hidden; /* Ensure no unexpected overflow */
-  
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
 }
 
-
-/* Mobile-first approach */
-/* ... (other styles) */
-
-/* For smaller screens */
 @media (max-width: 768px) {
   .main-zone .d-flex {
     align-items: center;
     justify-content: center;
     height: 100vh;
     display: flex;
-    
   }
 
   .main-zone .carousel {
@@ -143,31 +141,21 @@
     justify-content: center;
     height: 100vh;
   }
-
 }
 
-
-/* In your CSS file or style section */
 .carousel-control-prev,
 .carousel-control-next {
   display: none;
 }
 
-/* Pink background */
 .pink {
   background-color: pink;
 }
 
-/* Black (night mode) background */
 .black {
   background-color: black;
 }
 
-
-/* For previous and next buttons */
-
-
-/* Media query for smaller screens */
 @media (max-width: 768px) {
   .previousnext {
     z-index: 1000;
@@ -175,33 +163,24 @@
     position: absolute;
     align-items: center;
     justify-content: center;
-    
   }
 }
 
-.texte{
+.texte {
   font-family: 'abc';
   color: #ed0841;
   display: flex !important;
   bottom: 3em !important;
   position: absolute;
   font-weight: 120;
- 
-
 }
 
-/* Custom button styles */
 .custom-btn {
-  /* Reset Bootstrap button styles */
-  
   padding: 0.5em;
   margin: 0;
   cursor: pointer;
   bottom: 5em !important;
-  
   background-color: transparent;
-  
-  /* Add additional styling as needed for positioning, size, etc. */
 }
 
 .custom-btn:hover {
@@ -211,7 +190,6 @@
 @media (max-width: 768px) {
   .custom-btn {
     padding: 3.2em;
-    
   }
 }
 
@@ -226,7 +204,7 @@
   position: fixed;
   bottom: 10px;
   left: 10px;
-  z-index: 1000; /* Ensure it is on top of other elements */
+  z-index: 1000;
 }
 
 .contact-button {
@@ -236,7 +214,6 @@
   border: none;
   padding: 10px 20px;
   cursor: pointer;
- 
 }
 
 .contact-button:hover {
@@ -251,12 +228,11 @@
 
 .contact-text {
   font-family: 'abc';
-  color:#ed0841 ;
+  color: #ed0841;
   margin-top: 10px;
   background-color: transparent;
   padding: 10px;
 }
-
 
 .contact-text-container {
   position: absolute;
@@ -267,5 +243,5 @@
   padding: 20px;
   border-radius: 0px;
   text-align: center;
-  z-index: 1000; /* Ensure it appears above other elements */
+  z-index: 1000;
 }

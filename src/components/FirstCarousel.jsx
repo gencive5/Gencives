@@ -16,32 +16,40 @@ function FirstCarousel({ activeIndex, setActiveIndex }) {
     >
       {/* Slides */}
       <Carousel.Item>
-        <img
-          className="d-block carousel-img"
-          src={somnanbule}
-          alt="Slide 1"
-        />
+        <div className="carousel-item-wrapper">
+          <img
+            className="d-block carousel-img"
+            src={somnanbule}
+            alt="Slide 1"
+          />
+        </div>
       </Carousel.Item>
       <Carousel.Item>
-        <img
-          className="d-block carousel-img"
-          src={kontrolle}
-          alt="Slide 2"
-        />
+        <div className="carousel-item-wrapper">
+          <img
+            className="d-block carousel-img"
+            src={kontrolle}
+            alt="Slide 2"
+          />
+        </div>
       </Carousel.Item>
       <Carousel.Item>
-        <img
-          className="d-block carousel-img"
-          src={adelia}
-          alt="Slide 3"
-        />
+        <div className="carousel-item-wrapper">
+          <img
+            className="d-block carousel-img"
+            src={adelia}
+            alt="Slide 3"
+          />
+        </div>
       </Carousel.Item>
       <Carousel.Item>
-        <img
-          className="d-block carousel-img"
-          src={usa}
-          alt="Slide 4"
-        />
+        <div className="carousel-item-wrapper">
+          <img
+            className="d-block carousel-img"
+            src={usa}
+            alt="Slide 4"
+          />
+        </div>
       </Carousel.Item>
     </Carousel>
   );
