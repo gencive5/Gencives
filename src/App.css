@@ -228,6 +228,8 @@
 
 .contact-text {
   font-family: 'abc';
+  font-weight: 800;
+  font-size: xx-large;
   color: #ed0841;
   margin-top: 10px;
   background-color: transparent;
