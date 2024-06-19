@@ -117,6 +117,7 @@
   position: relative;
   top: 0;
   left: 0;
+  background-color: #fcfcfc;
 }
 
 .touch-zone {
@@ -157,6 +158,13 @@
 
 .black {
   background-color: black;
+}
+
+.previousnext {
+  z-index: 1000;
+  position: absolute;
+  align-items: center;
+  justify-content: center;
 }
 
 @media (max-width: 768px) {
