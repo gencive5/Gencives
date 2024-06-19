@@ -17,28 +17,28 @@ function FirstCarousel({ activeIndex, setActiveIndex }) {
       {/* Slides */}
       <Carousel.Item>
         <img
-          className="d-block w-100 carousel-img"
+          className="d-block carousel-img"
           src={somnanbule}
           alt="Slide 1"
         />
       </Carousel.Item>
       <Carousel.Item>
         <img
-          className="d-block w-100 carousel-img"
+          className="d-block carousel-img"
           src={kontrolle}
           alt="Slide 2"
         />
       </Carousel.Item>
       <Carousel.Item>
         <img
-          className="d-block w-100 carousel-img"
+          className="d-block carousel-img"
           src={adelia}
           alt="Slide 3"
         />
       </Carousel.Item>
       <Carousel.Item>
         <img
-          className="d-block w-100 carousel-img"
+          className="d-block carousel-img"
           src={usa}
           alt="Slide 4"
         />

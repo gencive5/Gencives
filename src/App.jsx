@@ -58,7 +58,7 @@ function App() {
   return (
     <Container fluid className="custom-container">
       <Row>
-        <Col sm={4}>
+        <Col sm={4} d-block>
         
           <div className="main-zone">
           <div className="logo-container">
@@ -91,7 +91,7 @@ function App() {
           
         </Col>
 
-        <Col>
+        <Col d-sm-none>
           {/* Touch zone for the second carousel */}
           <div className="touch-zone">
           <SecondCarousel activeIndex2={activeIndex2} setActiveIndex2={setActiveIndex2} />

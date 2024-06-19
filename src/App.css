@@ -11,12 +11,12 @@
   display: inline-block;
   height: auto;
   padding-top: 1.2em;
-  padding-left: 2em;
-  top: 0;
-  left: 0;
-  width: 45%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  width: 299px;
+  z-index: 100;
+  top: 1em;
 }
-
 
 .logo {
   height: auto;
@@ -43,11 +43,11 @@
 }
 
 .logo-container::before {
-  left: 12%; 
+  left: 10%; 
 }
 
 .logo-container::after {
-  right: 2%; 
+  right: 10%; 
 }
 
 .logo-container:hover::before,
@@ -57,33 +57,8 @@
   opacity: 1;
 }
 
-@media (max-width: 768px) {
-  .logo-container {
-    width: 299px;
-    height: auto;
-    left: 50%;
-    transform: translate(-50%, 0);
-    padding-top: 1.2em;
-    padding-left: 0;
-    z-index: 100;
-    
-  }
-  
-  .logo-container::before {
-    left: 10%; /* Adjust the position of the left circle for smaller screens */
-  }
-
-  .logo-container::after {
-    right: 10%; /* Adjust the position of the right circle for smaller screens */
-  }
-
-  
- 
-}
-
 
 .custom-container {
-
   height: 100vh;
   width: 100%;  
   margin: 0;
@@ -99,7 +74,6 @@
 
 .carousel-item {
   transition: all 1s;
-  
 }
 
 
