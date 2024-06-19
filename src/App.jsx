@@ -72,15 +72,19 @@ function App() {
 
             {showContact && (
               <div className="contact-text-container">
-                <p className="contact-text">This is the contact text.</p>
+                <p className="contact-text">@gencive5 <br></br>vic.segen@gmail.com</p>
               </div>
             )}
 
             <FirstCarousel activeIndex={activeIndex} setActiveIndex={setActiveIndex} />
 
             <div className="contact-container">
-              <button className="contact-button" onClick={toggleContact}>contact</button>
-              
+              <button
+                className={`contact-button ${showContact ? 'active' : ''}`}
+                onClick={toggleContact}
+              >
+                contact
+              </button>
             </div>
 
           </div>

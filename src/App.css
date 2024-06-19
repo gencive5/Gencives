@@ -270,24 +270,28 @@
   border-radius: 0%;
 }
 
+.contact-button.active {
+  background-color: #ed0841;
+  border-radius: 0px;
+}
+
 .contact-text {
   font-family: 'abc';
+  color:#ed0841 ;
   margin-top: 10px;
-  background-color: #ed0841;
+  background-color: transparent;
   padding: 10px;
-  border: 1px solid #ddd;
-
 }
+
 
 .contact-text-container {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: #f8f9fa;
+  background-color: transparent;
   padding: 20px;
-  border: 1px solid #ddd;
-  border-radius: 5px;
+  border-radius: 0px;
   text-align: center;
   z-index: 1000; /* Ensure it appears above other elements */
 }
