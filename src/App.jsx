@@ -5,12 +5,9 @@ import './index.css';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import NavigationButtons from './components/NavigationButtons';
 import FirstCarousel from './components/FirstCarousel';
 import SecondCarousel from './components/SecondCarousel';
 import logo from './assets/logogencives2.png';
-//import BlushingLogo from './components/BlushingLogo';//
-
 
 function App() {
   const [activeIndex, setActiveIndex] = useState(0); // First carousel active index
@@ -21,7 +18,7 @@ function App() {
   useEffect(() => {
     const handleScroll = (event) => {
       if (!canScroll) return;
-      
+
       setCanScroll(false);
       setTimeout(() => setCanScroll(true), 1800); // Adjust this timeout value as needed for the pause
 
@@ -32,10 +29,22 @@ function App() {
       setActiveIndex2(newIndex);
     };
 
+    const handleKeydown = (event) => {
+      if (!canScroll) return;
+
+      if (event.key === 'ArrowUp') {
+        handlePrevious();
+      } else if (event.key === 'ArrowDown') {
+        handleNext();
+      }
+    };
+
     window.addEventListener('wheel', handleScroll);
+    window.addEventListener('keydown', handleKeydown);
 
     return () => {
       window.removeEventListener('wheel', handleScroll);
+      window.removeEventListener('keydown', handleKeydown);
     };
   }, [activeIndex, activeIndex2, canScroll]);
 
@@ -44,7 +53,7 @@ function App() {
     setActiveIndex(newActiveIndex);
     setActiveIndex2(newActiveIndex);
   };
-  
+
   const handleNext = () => {
     const newActiveIndex = (activeIndex + 1) % 4; // Total number of slides is 4 (0 to 3)
     setActiveIndex(newActiveIndex);
@@ -59,16 +68,11 @@ function App() {
     <Container fluid className="custom-container">
       <Row>
         <Col className="col-first">
-        
           <div className="main-zone">
-          <div className="logo-container">
+            <div className="logo-container">
               <img src={logo} alt="Logo" className="logo" />
             </div>
-          {/* <BlushingLogo /> */}
-         
             <p className="texte">scroll</p>
-            
-            <NavigationButtons handlePrevious={handlePrevious} handleNext={handleNext} />
 
             {showContact && (
               <div className="contact-text-container">
@@ -86,15 +90,12 @@ function App() {
                 contact
               </button>
             </div>
-
           </div>
-          
         </Col>
 
         <Col className="col-second">
-          {/* Touch zone for the second carousel */}
           <div className="touch-zone">
-          <SecondCarousel activeIndex2={activeIndex2} setActiveIndex2={setActiveIndex2} />
+            <SecondCarousel activeIndex2={activeIndex2} setActiveIndex2={setActiveIndex2} />
           </div>
         </Col>
       </Row>

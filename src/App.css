@@ -161,10 +161,7 @@
 }
 
 .previousnext {
-  z-index: 1000;
-  position: absolute;
-  align-items: center;
-  justify-content: center;
+  display: none;
 }
 
 @media (max-width: 768px) {
