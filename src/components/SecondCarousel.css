@@ -1,0 +1,9 @@
+.grey-background {
+    background-color: grey;
+    height: 100vh; /* Adjust height as needed */
+    width: 100%; /* Adjust width as needed */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
