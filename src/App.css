@@ -27,8 +27,8 @@
 .logo-container::after {
   content: '';
   position: absolute;
-  width: 40px;
-  height: 40px;
+  width: 45px;
+  height: 45px;
   background: rgba(255, 0, 0, 0.5);
   border-radius: 50%;
   top: 50%;
@@ -106,18 +106,26 @@
 }
 
 .main-zone {
+  background-color: white;
   height: 100vh;
   width: 100%;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin: 0;
-  padding: 0;
-  position: relative;
-  top: 0;
-  left: 0;
-  background-color: #fcfcfc;
+  cursor: url('./assets/cursor-outline-white.svg'), auto;
+}
+
+.grey-background {
+  background-color: grey;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.grey-background:hover {
+  cursor: url('./assets/cursor-outline-red.svg'), auto;
 }
 
 .touch-zone {

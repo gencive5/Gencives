@@ -94,7 +94,7 @@ function App() {
         </Col>
 
         <Col className="col-second">
-          <div className="touch-zone">
+          <div className="touch-zone grey-background">
             <SecondCarousel activeIndex2={activeIndex2} setActiveIndex2={setActiveIndex2} />
           </div>
         </Col>
