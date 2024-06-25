@@ -16,17 +16,23 @@ function App() {
   const [showContact, setShowContact] = useState(false);
 
   useEffect(() => {
+    let scrollTimeout;
+
     const handleScroll = (event) => {
       if (!canScroll) return;
 
+      clearTimeout(scrollTimeout);
       setCanScroll(false);
-      setTimeout(() => setCanScroll(true), 1800); // Adjust this timeout value as needed for the pause
 
       const delta = Math.sign(event.deltaY); // Get scroll direction (1 for down, -1 for up)
-      const newIndex = (activeIndex + delta + 4) % 4; // Total number of slides is 5
+      const newIndex = (activeIndex + delta + 4) % 4; // Total number of slides is 4 (0 to 3)
 
       setActiveIndex(newIndex);
       setActiveIndex2(newIndex);
+
+      scrollTimeout = setTimeout(() => {
+        setCanScroll(true);
+      }, 500); // Adjust this value to control the debounce timing
     };
 
     const handleKeydown = (event) => {

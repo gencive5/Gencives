@@ -1,3 +1,5 @@
+/* App.css or index.css */
+
 #root {
   margin: 0;
   padding: 0;
@@ -82,7 +84,11 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: all 1s;
+  transition: transform 0.3s ease-in-out; /* Faster transition */
+}
+
+.carousel-item.no-transition {
+  transition: none !important; /* No transition */
 }
 
 .carousel-img {
@@ -188,7 +194,7 @@
   display: flex !important;
   bottom: 3em !important;
   position: absolute;
-  }
+}
 
 .custom-btn {
   padding: 0.5em;
