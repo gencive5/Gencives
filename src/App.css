@@ -183,12 +183,12 @@
 
 .texte {
   font-family: 'arial5';
+  font-size: 1.1rem;
   color: #ed0841;
   display: flex !important;
   bottom: 3em !important;
   position: absolute;
-  font-weight: 120;
-}
+  }
 
 .custom-btn {
   padding: 0.5em;
@@ -224,6 +224,7 @@
 
 .contact-button {
   font-family: 'arial5';
+  font-size: 1.1rem;
   background-color: transparent;
   color: #ed0841;
   border: none;
@@ -243,8 +244,7 @@
 
 .contact-text {
   font-family: 'arial5';
-  font-weight: 800;
-  font-size: xx-large;
+  font-size: 1.9rem;
   color: #ed0841;
   margin-top: 10px;
   background-color: transparent;
