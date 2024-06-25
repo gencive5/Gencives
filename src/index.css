@@ -82,3 +82,12 @@ button:focus-visible {
   font-weight: 330; /* Adjust font weight if necessary */
   font-style: normal; /* Adjust font style if necessary */
 }
+
+
+@font-face {
+  font-family: 'arial5';
+  src: local('arial5'), url('assets/fonts/Arial5.woff') format('woff'), url('assets/fonts/Arial5.woff2') format('woff2');
+
+  font-weight: 330; /* Adjust font weight if necessary */
+  font-style: normal; /* Adjust font style if necessary */
+}

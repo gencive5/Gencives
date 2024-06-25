@@ -182,7 +182,7 @@
 }
 
 .texte {
-  font-family: 'abc';
+  font-family: 'arial5';
   color: #ed0841;
   display: flex !important;
   bottom: 3em !important;
@@ -223,7 +223,7 @@
 }
 
 .contact-button {
-  font-family: 'abc';
+  font-family: 'arial5';
   background-color: transparent;
   color: #ed0841;
   border: none;
@@ -242,7 +242,7 @@
 }
 
 .contact-text {
-  font-family: 'abc';
+  font-family: 'arial5';
   font-weight: 800;
   font-size: xx-large;
   color: #ed0841;
