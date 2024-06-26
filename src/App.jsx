@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import './index.css';
@@ -6,14 +6,20 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import FirstCarousel from './components/FirstCarousel';
-import SecondCarousel from './components/SecondCarousel';
 import logo from './assets/logogencives2.png';
+import { Gradient } from './components/Gradient.js';
 
 function App() {
   const [activeIndex, setActiveIndex] = useState(0); // First carousel active index
   const [activeIndex2, setActiveIndex2] = useState(0); // Second carousel active index
   const [canScroll, setCanScroll] = useState(true);
   const [showContact, setShowContact] = useState(false);
+  const canvasRef = useRef(null);
+
+  useEffect(() => {
+    const gradient = new Gradient();
+    gradient.initGradient('#gradient-canvas');
+  }, []);
 
   useEffect(() => {
     let scrollTimeout;
@@ -82,7 +88,7 @@ function App() {
 
             {showContact && (
               <div className="contact-text-container">
-                <p className="contact-text">@gencive5 <br></br>vic.segen@gmail.com</p>
+                <p className="contact-text">@gencive5 <br />vic.segen@gmail.com</p>
               </div>
             )}
 
@@ -100,8 +106,8 @@ function App() {
         </Col>
 
         <Col className="col-second">
-          <div className="touch-zone grey-background">
-            <SecondCarousel activeIndex2={activeIndex2} setActiveIndex2={setActiveIndex2} />
+          <div className="touch-zone">
+            <canvas id="gradient-canvas" ref={canvasRef} data-transition-in />
           </div>
         </Col>
       </Row>
