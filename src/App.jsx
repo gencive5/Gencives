@@ -9,14 +9,12 @@ import FirstCarousel from './components/FirstCarousel';
 import logo from './assets/logogencives2.png';
 import { Gradient } from './components/Gradient.js';
 
-
 function App() {
   const [activeIndex, setActiveIndex] = useState(0); // First carousel active index
   const [activeIndex2, setActiveIndex2] = useState(0); // Second carousel active index
   const [canScroll, setCanScroll] = useState(true);
   const [showContact, setShowContact] = useState(false);
   const canvasRef = useRef(null);
-
 
   class GradientShader {
     constructor() {
@@ -48,10 +46,8 @@ function App() {
     }
   }
 
-  // Example usage
   const gradientShader = new GradientShader();
   setInterval(() => gradientShader.nextSlide(), 5000); // Change slide every 5 seconds
-
 
   useEffect(() => {
     const gradient = new Gradient();
@@ -138,7 +134,7 @@ function App() {
             <div className="logo-container">
               <img src={logo} alt="Logo" className="logo" />
             </div>
-            <p className="texte">scrolll</p>
+            <p className="texte">scroll</p>
 
             {showContact && (
               <div className="contact-text-container">
