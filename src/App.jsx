@@ -120,9 +120,11 @@ function App() {
     };
 
     logoContainer.addEventListener('click', handleClick);
+    logoContainer.addEventListener('touchstart', handleClick);
 
     return () => {
       logoContainer.removeEventListener('click', handleClick);
+      logoContainer.removeEventListener('touchstart', handleClick);
     };
   }, []);
 
