@@ -57,7 +57,6 @@
   opacity: 1;
 }
 
-/* Add this CSS for the active state */
 .logo-container.active::before,
 .logo-container.active::after {
   opacity: 1;
@@ -68,6 +67,7 @@
 .logo-container::after {
   transition: opacity 0.3s ease;
 }
+
 
 
 .custom-container {
