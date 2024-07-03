@@ -119,9 +119,11 @@ function App() {
       }, 300); // Adjust this timing to match your CSS transition
     };
 
+    // Add event listeners for both click and touchstart
     logoContainer.addEventListener('click', handleClick);
     logoContainer.addEventListener('touchstart', handleClick);
 
+    // Cleanup function
     return () => {
       logoContainer.removeEventListener('click', handleClick);
       logoContainer.removeEventListener('touchstart', handleClick);
