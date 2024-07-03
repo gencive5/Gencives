@@ -138,7 +138,7 @@ function App() {
             <div className="logo-container">
               <img src={logo} alt="Logo" className="logo" />
             </div>
-            <p className="texte">scroll</p>
+            <p className="texte">scrolll</p>
 
             {showContact && (
               <div className="contact-text-container">
