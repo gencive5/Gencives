@@ -57,6 +57,19 @@
   opacity: 1;
 }
 
+/* Add this CSS for the active state */
+.logo-container.active::before,
+.logo-container.active::after {
+  opacity: 1;
+}
+
+/* Optionally, you can increase the transition duration for a smoother effect */
+.logo-container::before,
+.logo-container::after {
+  transition: opacity 0.3s ease;
+}
+
+
 .custom-container {
   height: 100vh;
   width: 100%;

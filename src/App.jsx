@@ -113,6 +113,23 @@ function App() {
     setShowContact(!showContact);
   };
 
+  useEffect(() => {
+    const logoContainer = document.querySelector('.logo-container');
+
+    const handleClick = () => {
+      logoContainer.classList.add('active');
+      setTimeout(() => {
+        logoContainer.classList.remove('active');
+      }, 300); // Adjust this timing to match your CSS transition
+    };
+
+    logoContainer.addEventListener('click', handleClick);
+
+    return () => {
+      logoContainer.removeEventListener('click', handleClick);
+    };
+  }, []);
+
   return (
     <Container fluid className="custom-container">
       <Row>
