@@ -11,11 +11,17 @@ import { Gradient } from './components/Gradient.js';
 
 function App() {
   const [activeIndex, setActiveIndex] = useState(0); // First carousel active index
-  const [activeIndex2, setActiveIndex2] = useState(0); // Second carousel active index
   const [canScroll, setCanScroll] = useState(true);
   const [showContact, setShowContact] = useState(false);
   const canvasRef = useRef(null);
 
+  // Initialize gradient
+  useEffect(() => {
+    const gradient = new Gradient();
+    gradient.initGradient('#gradient-canvas');
+  }, []);
+
+  // Handle scroll and keyboard events for slide changes
   useEffect(() => {
     let scrollTimeout;
 
@@ -29,7 +35,6 @@ function App() {
       const newIndex = (activeIndex + delta + 4) % 4; // Total number of slides is 4 (0 to 3)
 
       setActiveIndex(newIndex);
-      setActiveIndex2(newIndex);
 
       scrollTimeout = setTimeout(() => {
         setCanScroll(true);
@@ -53,24 +58,23 @@ function App() {
       window.removeEventListener('wheel', handleScroll);
       window.removeEventListener('keydown', handleKeydown);
     };
-  }, [activeIndex, activeIndex2, canScroll]);
+  }, [activeIndex, canScroll]);
 
   const handlePrevious = () => {
     const newActiveIndex = activeIndex === 0 ? 3 : activeIndex - 1; // Total number of slides is 4 (0 to 3)
     setActiveIndex(newActiveIndex);
-    setActiveIndex2(newActiveIndex);
   };
 
   const handleNext = () => {
     const newActiveIndex = (activeIndex + 1) % 4; // Total number of slides is 4 (0 to 3)
     setActiveIndex(newActiveIndex);
-    setActiveIndex2(newActiveIndex);
   };
 
   const toggleContact = () => {
     setShowContact(!showContact);
   };
 
+  // Handle click on logo for mobile fade effect
   useEffect(() => {
     const logoContainer = document.querySelector('.logo-container');
 
@@ -78,7 +82,7 @@ function App() {
       logoContainer.classList.add('active');
       setTimeout(() => {
         logoContainer.classList.remove('active');
-      }, 300); // Adjust this timing to match your CSS transition
+      }, 2000); // Adjusted to 2 seconds for mobile
     };
 
     logoContainer.addEventListener('click', handleClick);
@@ -86,11 +90,6 @@ function App() {
     return () => {
       logoContainer.removeEventListener('click', handleClick);
     };
-  }, []);
-
-  useEffect(() => {
-    const gradient = new Gradient();
-    gradient.initGradient('#gradient-canvas');
   }, []);
 
   return (

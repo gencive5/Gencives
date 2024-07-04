@@ -6,7 +6,6 @@
   text-align: center;
 }
 
-
 .logo-container {
   position: absolute;
   display: inline-block;
@@ -32,7 +31,7 @@
   position: absolute;
   width: 45px;
   height: 45px;
-  background: rgba(255, 0, 8, 0.5);
+  background: rgba(255, 0, 0, 0.7); /* More red color */
   border-radius: 50%;
   top: 50%;
   transform: translateY(-50%);
@@ -51,10 +50,10 @@
   right: 10%;
 }
 
-/* Mobile click effect */
-.logo-container:active::before,
-.logo-container:active::after {
+.logo-container.active::before,
+.logo-container.active::after {
   opacity: 1;
+  transition: opacity 2s ease; /* Longer transition duration on mobile click */
 }
 
 @media (min-width: 769px) {
@@ -63,9 +62,6 @@
     opacity: 1;
   }
 }
-
-
-
 
 
 
