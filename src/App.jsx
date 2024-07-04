@@ -16,44 +16,6 @@ function App() {
   const [showContact, setShowContact] = useState(false);
   const canvasRef = useRef(null);
 
-  class GradientShader {
-    constructor() {
-      this.colorSets = [
-        ["#7d7d7d", "#8f8f8f", "#858585", "#828282"],
-        ["#FF0000", "#FF7F00", "#FFFF00", "#7FFF00"],
-        ["#00FF00", "#007FFF", "#0000FF", "#7F00FF"],
-        ["#FF00FF", "#FF007F", "#FF0000", "#FF7F00"],
-        ["#FFFF00", "#7FFF00", "#00FF00", "#007FFF"]
-      ];
-      this.currentSetIndex = 0;
-      this.initGradientColors();
-    }
-
-    initGradientColors() {
-      this.updateCSSVariables(this.colorSets[this.currentSetIndex]);
-    }
-
-    updateCSSVariables(colors) {
-      document.documentElement.style.setProperty('--gradient-color-1', colors[0]);
-      document.documentElement.style.setProperty('--gradient-color-2', colors[1]);
-      document.documentElement.style.setProperty('--gradient-color-3', colors[2]);
-      document.documentElement.style.setProperty('--gradient-color-4', colors[3]);
-    }
-
-    nextSlide() {
-      this.currentSetIndex = (this.currentSetIndex + 1) % this.colorSets.length;
-      this.updateCSSVariables(this.colorSets[this.currentSetIndex]);
-    }
-  }
-
-  const gradientShader = new GradientShader();
-  setInterval(() => gradientShader.nextSlide(), 5000); // Change slide every 5 seconds
-
-  useEffect(() => {
-    const gradient = new Gradient();
-    gradient.initGradient('#gradient-canvas');
-  }, []);
-
   useEffect(() => {
     let scrollTimeout;
 
@@ -119,15 +81,16 @@ function App() {
       }, 300); // Adjust this timing to match your CSS transition
     };
 
-    // Add event listeners for both click and touchstart
     logoContainer.addEventListener('click', handleClick);
-    logoContainer.addEventListener('touchstart', handleClick);
 
-    // Cleanup function
     return () => {
       logoContainer.removeEventListener('click', handleClick);
-      logoContainer.removeEventListener('touchstart', handleClick);
     };
+  }, []);
+
+  useEffect(() => {
+    const gradient = new Gradient();
+    gradient.initGradient('#gradient-canvas');
   }, []);
 
   return (
