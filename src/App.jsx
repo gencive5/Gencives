@@ -23,41 +23,43 @@ function App() {
 
   // Handle scroll and keyboard events for slide changes
   useEffect(() => {
-    let scrollTimeout;
+    if (window.innerWidth > 768) {
+      let scrollTimeout;
 
-    const handleScroll = (event) => {
-      if (!canScroll) return;
+      const handleScroll = (event) => {
+        if (!canScroll) return;
 
-      clearTimeout(scrollTimeout);
-      setCanScroll(false);
+        clearTimeout(scrollTimeout);
+        setCanScroll(false);
 
-      const delta = Math.sign(event.deltaY); // Get scroll direction (1 for down, -1 for up)
-      const newIndex = (activeIndex + delta + 4) % 4; // Total number of slides is 4 (0 to 3)
+        const delta = Math.sign(event.deltaY); // Get scroll direction (1 for down, -1 for up)
+        const newIndex = (activeIndex + delta + 4) % 4; // Total number of slides is 4 (0 to 3)
 
-      setActiveIndex(newIndex);
+        setActiveIndex(newIndex);
 
-      scrollTimeout = setTimeout(() => {
-        setCanScroll(true);
-      }, 500); // Adjust this value to control the debounce timing
-    };
+        scrollTimeout = setTimeout(() => {
+          setCanScroll(true);
+        }, 500); // Adjust this value to control the debounce timing
+      };
 
-    const handleKeydown = (event) => {
-      if (!canScroll) return;
+      const handleKeydown = (event) => {
+        if (!canScroll) return;
 
-      if (event.key === 'ArrowUp') {
-        handlePrevious();
-      } else if (event.key === 'ArrowDown') {
-        handleNext();
-      }
-    };
+        if (event.key === 'ArrowUp') {
+          handlePrevious();
+        } else if (event.key === 'ArrowDown') {
+          handleNext();
+        }
+      };
 
-    window.addEventListener('wheel', handleScroll);
-    window.addEventListener('keydown', handleKeydown);
+      window.addEventListener('wheel', handleScroll);
+      window.addEventListener('keydown', handleKeydown);
 
-    return () => {
-      window.removeEventListener('wheel', handleScroll);
-      window.removeEventListener('keydown', handleKeydown);
-    };
+      return () => {
+        window.removeEventListener('wheel', handleScroll);
+        window.removeEventListener('keydown', handleKeydown);
+      };
+    }
   }, [activeIndex, canScroll]);
 
   const handlePrevious = () => {
@@ -92,6 +94,9 @@ function App() {
     };
   }, []);
 
+  // Detect mobile and change instruction text
+  const isMobile = window.innerWidth <= 768;
+
   return (
     <Container fluid className="custom-container">
       <Row>
@@ -100,7 +105,7 @@ function App() {
             <div className="logo-container">
               <img src={logo} alt="Logo" className="logo" />
             </div>
-            <p className="texte">scroll</p>
+            <p className="texte">{isMobile ? 'swipe' : 'scroll'}</p>
 
             {showContact && (
               <div className="contact-text-container">
