@@ -5,6 +5,8 @@
   padding: 0;
   text-align: center;
 }
+
+
 .logo-container {
   position: absolute;
   display: inline-block;
@@ -49,23 +51,22 @@
   right: 10%;
 }
 
-.logo-container:hover::before,
-.logo-container:hover::after,
+/* Mobile click effect */
 .logo-container:active::before,
 .logo-container:active::after {
   opacity: 1;
 }
 
-.logo-container.active::before,
-.logo-container.active::after {
-  opacity: 1;
+@media (min-width: 769px) {
+  .logo-container:hover::before,
+  .logo-container:hover::after {
+    opacity: 1;
+  }
 }
 
-/* Optionally, you can increase the transition duration for a smoother effect */
-.logo-container::before,
-.logo-container::after {
-  transition: opacity 0.3s ease;
-}
+
+
+
 
 
 
