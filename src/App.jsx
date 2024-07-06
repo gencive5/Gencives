@@ -73,7 +73,7 @@ function App() {
   };
 
   const toggleContact = () => {
-    setShowContact(!showContact);
+    setShowContact((prev) => !prev); // Toggle the state of showContact
   };
 
   // Handle click on logo for mobile fade effect
@@ -114,6 +114,7 @@ function App() {
             )}
 
             <FirstCarousel activeIndex={activeIndex} setActiveIndex={setActiveIndex} />
+            
 
             <div className="contact-container">
               <button
