@@ -53,7 +53,7 @@
 .logo-container.active::before,
 .logo-container.active::after {
   opacity: 1;
-  transition: opacity 2s ease; /* Longer transition duration on mobile click */
+  transition: opacity 2s ease-out; /* Longer transition duration on mobile click */
 }
 
 @media (min-width: 769px) {
