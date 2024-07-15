@@ -31,6 +31,7 @@ body, html {
   align-items: center;
   justify-content: center;
   position: relative;
+  
 }
 
 /* Logo and carousel container */
@@ -156,7 +157,6 @@ body, html {
   background-color: transparent;
   color: #ed0841;
   border: none;
-  padding: 10px 20px;
   cursor: pointer;
 }
 
@@ -172,7 +172,7 @@ body, html {
 
 .contact-text {
   font-family: 'arial5';
-  font-size: 1.9rem;
+  font-size: 2rem;
   color: #ed0841;
   margin-top: 10px;
   background-color: transparent;
@@ -185,10 +185,12 @@ body, html {
   left: 50%;
   transform: translate(-50%, -50%);
   background-color: transparent;
-  padding: 20px;
+
   border-radius: 0px;
   text-align: center;
   z-index: 1000;
+  
+  
 }
 
 /* Text styles */

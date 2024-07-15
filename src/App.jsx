@@ -14,6 +14,26 @@ function App() {
   const [showContact, setShowContact] = useState(false);
   const canvasRef = useRef(null);
 
+  const adjustFontSize = () => {
+    const logoContainer = document.querySelector('.logo-container');
+    const contactText = document.querySelector('.contact-text');
+
+    if (logoContainer) {
+      const logoWidth = logoContainer.clientWidth;
+      const newFontSize = logoWidth * 0.1; // Adjust the multiplier as needed for appropriate scaling
+      if (contactText) {
+        contactText.style.fontSize = `${newFontSize}px`;
+      }
+    }
+  };
+
+  useEffect(() => {
+    adjustFontSize();
+    window.addEventListener('resize', adjustFontSize);
+    return () => window.removeEventListener('resize', adjustFontSize);
+  }, []);
+
+
   // Initialize gradient
   useEffect(() => {
     const gradient = new Gradient();
@@ -105,15 +125,14 @@ function App() {
               <FirstCarousel activeIndex={activeIndex} setActiveIndex={setActiveIndex} />
               <p className="texte">{window.innerWidth <= 768 ? 'swipe' : 'scroll'}</p>
             
-            
-
-            {showContact && (
+        
+              {showContact && (
               <div className="contact-text-container">
                 <p className="contact-text">@gencive5 <br />vic.segen@gmail.com</p>
               </div>
-            )}
+              )}
 
-</div>
+            </div>
           </div>
         </Col>
         <Col sm={12} md={4} className="col-second">
