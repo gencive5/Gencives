@@ -76,11 +76,11 @@ body, html {
 }
 
 .logo-container::before {
-  left: 15px; /* Adjusted positioning */
+  left: 19px; /* Adjusted positioning */
 }
 
 .logo-container::after {
-  right: 15px; /* Adjusted positioning */
+  right: 19px; /* Adjusted positioning */
 }
 
 .logo-container.active::before,
@@ -95,7 +95,11 @@ body, html {
   .logo-container:hover::after {
     opacity: 1;
   }
+
+  
+
 }
+
 
 /* Carousel styling */
 .carousel {
@@ -212,7 +216,19 @@ body, html {
   .logo-container {
     position: relative; /* Ensure relative positioning for mobile */
   }
+
+.logo-container::before,
+  .logo-container::after {
+   
+    width: 48px;
+    height: 48px;
+    background: rgba(255, 0, 0, 0.86);
+   
+  }
+
 }
+
+
 
 /* Larger screens */
 @media (min-width: 769px) {
