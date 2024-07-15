@@ -176,7 +176,7 @@ body, html {
 
 .contact-text {
   font-family: 'arial5';
-  font-size: 2rem;
+  font-size: 1rem;
   color: #ed0841;
   margin-top: 10px;
   background-color: transparent;
@@ -193,6 +193,7 @@ body, html {
   border-radius: 0px;
   text-align: center;
   z-index: 1000;
+  
  
   
   

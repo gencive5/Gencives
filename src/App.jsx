@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef, useCallback } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import Container from 'react-bootstrap/Container';
@@ -12,33 +12,48 @@ function App() {
   const [activeIndex, setActiveIndex] = useState(0);
   const [canScroll, setCanScroll] = useState(true);
   const [showContact, setShowContact] = useState(false);
+  const [fontSize, setFontSize] = useState('1rem');
   const canvasRef = useRef(null);
 
-  const adjustFontSize = () => {
+   // Adjust font size based on logo container width
+   const adjustFontSize = useCallback(() => {
     const logoContainer = document.querySelector('.logo-container');
-    const contactText = document.querySelector('.contact-text');
-
     if (logoContainer) {
       const logoWidth = logoContainer.clientWidth;
       const newFontSize = logoWidth * 0.1; // Adjust the multiplier as needed for appropriate scaling
-      if (contactText) {
-        contactText.style.fontSize = `${newFontSize}px`;
-      }
+      setFontSize(`${newFontSize}px`);
     }
-  };
+  }, []);
 
   useEffect(() => {
-    adjustFontSize();
-    window.addEventListener('resize', adjustFontSize);
+    const handleResize = () => {
+      adjustFontSize();
+    };
 
-    // Handle orientation changes on mobile
-    window.addEventListener('orientationchange', adjustFontSize);
+    const handleOrientationChange = () => {
+      adjustFontSize();
+    };
+
+    window.addEventListener('resize', handleResize);
+    window.addEventListener('orientationchange', handleOrientationChange);
+
+    // Initial font size adjustment
+    adjustFontSize();
+
+    // Recheck the dimensions after a short delay to ensure everything is rendered correctly
+    setTimeout(adjustFontSize, 1000);
 
     return () => {
-      window.removeEventListener('resize', adjustFontSize);
-      window.removeEventListener('orientationchange', adjustFontSize);
+      window.removeEventListener('resize', handleResize);
+      window.removeEventListener('orientationchange', handleOrientationChange);
     };
+  }, [adjustFontSize]);
+
+  // Force re-render on initial load
+  useEffect(() => {
+    adjustFontSize();
   }, []);
+  
 
   // Initialize gradient
   useEffect(() => {
@@ -131,14 +146,14 @@ function App() {
               <FirstCarousel activeIndex={activeIndex} setActiveIndex={setActiveIndex} />
               <p className="texte">{window.innerWidth <= 768 ? 'swipe' : 'scroll'}</p>
             
-        
+              </div>
               {showContact && (
               <div className="contact-text-container">
-                <p className="contact-text">@gencive5 <br />vic.segen@gmail.com</p>
+                <p className="contact-text" style={{ fontSize }}>@gencive5 <br />vic.segen@gmail.com</p>
               </div>
               )}
 
-            </div>
+            
           </div>
         </Col>
         <Col sm={12} md={4} className="col-second">
