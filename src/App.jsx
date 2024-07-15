@@ -98,10 +98,14 @@ function App() {
       <Row className="no-gutters">
         <Col sm={12} md={8} className="col-first">
           <div className="main-zone">
-            <div className="logo-container">
-              <img src={logo} alt="Logo" className="logo" />
-            </div>
-            <p className="texte">{window.innerWidth <= 768 ? 'swipe' : 'scroll'}</p>
+            <div className="logo-carousel-container">
+              <div className="logo-container">
+                <img src={logo} alt="Logo" className="logo" />
+              </div>
+              <FirstCarousel activeIndex={activeIndex} setActiveIndex={setActiveIndex} />
+              <p className="texte">{window.innerWidth <= 768 ? 'swipe' : 'scroll'}</p>
+            
+            
 
             {showContact && (
               <div className="contact-text-container">
@@ -109,26 +113,18 @@ function App() {
               </div>
             )}
 
-            <FirstCarousel activeIndex={activeIndex} setActiveIndex={setActiveIndex} />
-
-            <div className="contact-container">
-              <button
-                className= {`contact-button ${showContact ? 'active' : ''}`}
-                onClick={toggleContact}
-              >
-                contact
-              </button>
-            </div>
+</div>
           </div>
         </Col>
-        
         <Col sm={12} md={4} className="col-second">
-          <div className="touch-zone">
-            <canvas className="grey-zone" id="gradient-canvas" ref={canvasRef} data-transition-in />
-          </div>
+          <canvas id="gradient-canvas" ref={canvasRef}></canvas>
         </Col>
-        
       </Row>
+      <div className="contact-container">
+        <button className={`contact-button ${showContact ? 'active' : ''}`} onClick={toggleContact}>
+          contact
+        </button>
+      </div>
     </Container>
   );
 }
