@@ -193,6 +193,9 @@ body, html {
   border-radius: 0px;
   text-align: center;
   z-index: 1000;
+  width: 65%;
+  max-width: 65%; /* Ensure the width does not exceed the carousel width */
+  min-width: 300px; /* Ensure the text is readable on smaller screens */
   
   
 }

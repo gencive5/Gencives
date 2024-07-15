@@ -30,9 +30,15 @@ function App() {
   useEffect(() => {
     adjustFontSize();
     window.addEventListener('resize', adjustFontSize);
-    return () => window.removeEventListener('resize', adjustFontSize);
-  }, []);
 
+    // Handle orientation changes on mobile
+    window.addEventListener('orientationchange', adjustFontSize);
+
+    return () => {
+      window.removeEventListener('resize', adjustFontSize);
+      window.removeEventListener('orientationchange', adjustFontSize);
+    };
+  }, []);
 
   // Initialize gradient
   useEffect(() => {
