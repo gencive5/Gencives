@@ -34,7 +34,7 @@ body, html {
   
 }
 
-/* Logo and carousel container */
+
 .logo-carousel-container {
   display: flex;
   flex-direction: column;

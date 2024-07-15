@@ -146,12 +146,12 @@ function App() {
               <FirstCarousel activeIndex={activeIndex} setActiveIndex={setActiveIndex} />
               <p className="texte">{window.innerWidth <= 768 ? 'swipe' : 'scroll'}</p>
             
-              </div>
               {showContact && (
               <div className="contact-text-container">
                 <p className="contact-text" style={{ fontSize }}>@gencive5 <br />vic.segen@gmail.com</p>
               </div>
               )}
+              </div>
 
             
           </div>
