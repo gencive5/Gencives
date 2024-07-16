@@ -44,6 +44,7 @@ body, html {
   position: relative;
   
   
+  
 }
 
 .logo-container {
@@ -229,7 +230,7 @@ body, html {
   }
 
   .logo-carousel-container {
-    margin-bottom: 15vh; /* Adjust this value to move the container up or down */
+    margin-bottom: 13vh; /* Adjust this value to move the container up or down */
   }
 
   
