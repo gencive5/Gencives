@@ -232,6 +232,8 @@ body, html {
     margin-bottom: 15vh; /* Adjust this value to move the container up or down */
   }
 
+  
+
 }
 
 
@@ -261,6 +263,16 @@ body, html {
   .previousnext {
     display: none;
   }
+
+ /* Contact button styles */
+ .contact-container {
+  position: absolute; /* Changed from fixed to absolute */
+  bottom: 0%;
+  left: 0%;
+  z-index: 1000;
+}
+
+
 }
 
 /* Gradient canvas */
