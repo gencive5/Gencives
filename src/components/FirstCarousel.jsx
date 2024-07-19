@@ -1,7 +1,7 @@
 import React from 'react';
 import Carousel from 'react-bootstrap/Carousel';
-import somnanbule from '../assets/images/somnanbule.jpg';
-import kontrolle from '../assets/images/kontrolle.jpg';
+import somnanbule from '../assets/images/SomnanbuleMax.jpg';
+import kontrolle from '../assets/images/KontrolleMax.jpg';
 import adelia from '../assets/images/adelia.jpg';
 import usa from '../assets/images/usa.jpg';
 
