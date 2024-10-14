@@ -44,7 +44,6 @@ body, html {
   position: relative;
   
   
-  
 }
 
 .logo-container {
@@ -190,7 +189,6 @@ body, html {
   left: 50%;
   transform: translate(-50%, -50%);
   background-color: transparent;
-
   border-radius: 0px;
   text-align: center;
   z-index: 1000;
@@ -282,7 +280,7 @@ body, html {
   height: 100%;
   --gradient-color-1: #78797b; 
   --gradient-color-2: #83868b; 
-  --gradient-color-3: #767a76;  
+  --gradient-color-3: #909290;  
   --gradient-color-4: #6e6d6d;
   /* Add your gradient properties here */
 }
