@@ -1,6 +1,6 @@
 import React from 'react';
 import Carousel from 'react-bootstrap/Carousel';
-import somnanbule from '../assets/images/SomnanbuleMax.jpg';
+import gandia from '../assets/images/GandiaMax.jpg';
 import kontrolle from '../assets/images/KontrolleMax.jpg';
 import adelia from '../assets/images/adeliaMAX.jpg';
 import usa from '../assets/images/usukMax.jpg';
@@ -31,7 +31,7 @@ function FirstCarousel({ activeIndex, setActiveIndex }) {
         <div className="carousel-item-wrapper">
           <img
             className="d-block carousel-img"
-            src={somnanbule}
+            src={gandia}
             alt="Slide 2"
           />
         </div>
