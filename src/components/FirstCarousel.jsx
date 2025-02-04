@@ -6,7 +6,7 @@ import adelia from '../assets/images/adeliaMAX.jpg';
 import usa from '../assets/images/usukMax.jpg';
 import elastic from '../assets/images/ElasticMax.jpg';
 import online from '../assets/images/OnlineMax.jpg';
-import emma from '../assets/images/Emma3Max.jpg';
+import emma from '../assets/images/EmmaMax.jpg';
 
 function FirstCarousel({ activeIndex, setActiveIndex }) {
   return (
