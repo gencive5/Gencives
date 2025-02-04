@@ -7,6 +7,7 @@ import Col from 'react-bootstrap/Col';
 import FirstCarousel from './components/FirstCarousel';
 import logo from './assets/logogencives2.png';
 import { Gradient } from './components/Gradient.js';
+import GifCarousel from './components/GifCarousel';
 
 function App() {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -157,7 +158,7 @@ function App() {
           </div>
         </Col>
         <Col sm={12} md={4} className="col-second">
-          <canvas id="gradient-canvas" ref={canvasRef}></canvas>
+        <GifCarousel activeIndex={activeIndex} />
         </Col>
       </Row>
       <div className="contact-container">
