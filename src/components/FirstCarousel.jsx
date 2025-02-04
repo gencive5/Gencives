@@ -22,7 +22,7 @@ function FirstCarousel({ activeIndex, setActiveIndex }) {
         <div className="carousel-item-wrapper">
           <img
             className="d-block carousel-img"
-            src={somnanbule}
+            src={kontrolle}
             alt="Slide 1"
           />
         </div>
@@ -31,7 +31,7 @@ function FirstCarousel({ activeIndex, setActiveIndex }) {
         <div className="carousel-item-wrapper">
           <img
             className="d-block carousel-img"
-            src={kontrolle}
+            src={somnanbule}
             alt="Slide 2"
           />
         </div>
