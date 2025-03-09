@@ -22,7 +22,7 @@ function GifCarousel({ activeIndex }) {
       {gifSlides.map((gif, index) => (
         <Carousel.Item key={index}>
           <div className="carousel-item-wrapper">
-            <img className="d-block carousel-img" src={gif} alt={`Gif Slide ${index + 1}`} />
+            <img className="d-block carousel-imgg" src={gif} alt={`Gif Slide ${index + 1}`} />
           </div>
         </Carousel.Item>
       ))}
