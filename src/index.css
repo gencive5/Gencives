@@ -65,3 +65,12 @@ button:focus-visible {
   font-weight: 330; /* Adjust font weight if necessary */
   font-style: normal; /* Adjust font style if necessary */
 }
+
+
+@font-face {
+  font-family: 'Unormative';
+  src: local('Unormative'), url('assets/fonts/UnormativeFraktur.woff') format('woff'), url('assets/fonts/UnormativeFraktur.woff2') format('woff2');
+
+  font-weight: 330; /* Adjust font weight if necessary */
+  font-style: normal; /* Adjust font style if necessary */
+}
