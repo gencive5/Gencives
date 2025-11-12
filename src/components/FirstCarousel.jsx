@@ -3,6 +3,7 @@ import Carousel from 'react-bootstrap/Carousel';
 import gandia from '../assets/images/sea.webp';
 import kontrolle from '../assets/images/KontrolleMax.webp';
 import adelia from '../assets/images/tangle.webp';
+import trash from '../assets/images/trash.webp';
 import usa from '../assets/images/transat.webp';
 import elastic from '../assets/images/pink.webp';
 import online from '../assets/images/OnlineMax.webp';
@@ -78,6 +79,15 @@ function FirstCarousel({ activeIndex, setActiveIndex }) {
             className="d-block carousel-img"
             src={emma}
             alt="Slide 7"
+          />
+        </div>
+      </Carousel.Item>
+       <Carousel.Item>
+        <div className="carousel-item-wrapper">
+          <img
+            className="d-block carousel-img"
+            src={trash}
+            alt="Slide 8"
           />
         </div>
       </Carousel.Item>

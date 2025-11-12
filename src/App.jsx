@@ -74,13 +74,13 @@ function App() {
         setCanScroll(false);
 
         const delta = Math.sign(event.deltaY);
-        const newIndex = (activeIndex + delta + 7) % 7;
+        const newIndex = (activeIndex + delta + 8) % 8;
 
         setActiveIndex(newIndex);
 
         scrollTimeout = setTimeout(() => {
           setCanScroll(true);
-        }, 700);
+        }, 800);
       };
 
       const handleKeydown = (event) => {
@@ -109,7 +109,7 @@ function App() {
   };
 
   const handleNext = () => {
-    const newActiveIndex = (activeIndex + 1) % 7;
+    const newActiveIndex = (activeIndex + 1) % 8;
     setActiveIndex(newActiveIndex);
   };
 

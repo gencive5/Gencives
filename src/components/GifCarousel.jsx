@@ -7,8 +7,9 @@ import gif4 from '../assets/gifs/gif4.gif';
 import gif5 from '../assets/gifs/gif5.gif';
 import gif6 from '../assets/gifs/gif6.gif';
 import gif7 from '../assets/gifs/gif7.gif';
+import gif8 from '../assets/gifs/gif8.gif';
 
-const gifSlides = [gif3, gif1, gif2, gif4, gif5, gif6, gif7];
+const gifSlides = [gif3, gif1, gif2, gif4, gif5, gif6, gif7, gif8];
 
 function GifCarousel({ activeIndex }) {
   return (
