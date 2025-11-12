@@ -1,12 +1,12 @@
 import React from 'react';
 import Carousel from 'react-bootstrap/Carousel';
-import gandia from '../assets/images/GandiaMax.jpg';
-import kontrolle from '../assets/images/KontrolleMax.jpg';
-import adelia from '../assets/images/adeliaMAX.jpg';
-import usa from '../assets/images/usukMax.jpg';
-import elastic from '../assets/images/ElasticMax.jpg';
-import online from '../assets/images/OnlineMax.jpg';
-import emma from '../assets/images/Emma5Max.jpg';
+import gandia from '../assets/images/sea.webp';
+import kontrolle from '../assets/images/KontrolleMax.webp';
+import adelia from '../assets/images/tangle.webp';
+import usa from '../assets/images/transat.webp';
+import elastic from '../assets/images/pink.webp';
+import online from '../assets/images/OnlineMax.webp';
+import emma from '../assets/images/lighters.webp';
 
 function FirstCarousel({ activeIndex, setActiveIndex }) {
   return (
