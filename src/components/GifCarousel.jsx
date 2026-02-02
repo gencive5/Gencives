@@ -1,4 +1,3 @@
-import React from 'react';
 import Carousel from 'react-bootstrap/Carousel';
 import gif1 from '../assets/gifs/gif1.gif';
 import gif2 from '../assets/gifs/gif2.gif';
@@ -23,7 +22,7 @@ function GifCarousel({ activeIndex }) {
       {gifSlides.map((gif, index) => (
         <Carousel.Item key={index}>
           <div className="carousel-item-wrapper">
-            <img className="d-block carousel-imgg" src={gif} alt={`Gif Slide ${index + 1}`} />
+            <img className="carousel-imgg" src={gif} alt={`Gif Slide ${index + 1}`} />
           </div>
         </Carousel.Item>
       ))}

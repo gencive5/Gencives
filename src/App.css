@@ -30,8 +30,7 @@ body, html {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  position: relative;
-  
+  position: relative; 
 }
 
 
@@ -42,7 +41,6 @@ body, html {
   justify-content: center;
   width: 100%;
   position: relative;
-  
 }
 
 .logo-container {
@@ -132,9 +130,9 @@ body, html {
 }
 
 .carousel-imgg {
-  width: 140%;
-  height: 100vh;
-  object-fit: contain;
+  width: auto;
+  height: 100%;
+  object-fit: fill;
   object-position: center;
 }
 
@@ -194,12 +192,9 @@ body, html {
   background-color: transparent;
   border-radius: 0px;
   text-align: center;
-  z-index: 1000;
-  
- 
-  
-  
+  z-index: 1000; 
 }
+
 
 /* Text styles */
 .texte {
@@ -223,19 +218,14 @@ body, html {
 
 .logo-container::before,
   .logo-container::after {
-   
     width: 48px;
     height: 48px;
     background: rgba(255, 0, 0, 0.86);
-   
   }
 
   .logo-carousel-container {
     margin-bottom: 10vh; /* Adjust this value to move the container up or down */
   }
-
-  
-
 }
 
 
@@ -273,8 +263,6 @@ body, html {
   left: 0%;
   z-index: 1000;
 }
-
-
 }
 
 /* Gradient canvas */

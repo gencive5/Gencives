@@ -1,4 +1,3 @@
-import React from 'react';
 import Carousel from 'react-bootstrap/Carousel';
 import gandia from '../assets/images/sea.webp';
 import kontrolle from '../assets/images/KontrolleMax.webp';
@@ -22,7 +21,7 @@ function FirstCarousel({ activeIndex, setActiveIndex }) {
       <Carousel.Item>
         <div className="carousel-item-wrapper">
           <img
-            className="d-block carousel-img"
+            className="carousel-img"
             src={kontrolle}
             alt="Slide 1"
           />
@@ -31,7 +30,7 @@ function FirstCarousel({ activeIndex, setActiveIndex }) {
       <Carousel.Item>
         <div className="carousel-item-wrapper">
           <img
-            className="d-block carousel-img"
+            className="carousel-img"
             src={gandia}
             alt="Slide 2"
           />
@@ -40,7 +39,7 @@ function FirstCarousel({ activeIndex, setActiveIndex }) {
       <Carousel.Item>
         <div className="carousel-item-wrapper">
           <img
-            className="d-block carousel-img"
+            className="carousel-img"
             src={adelia}
             alt="Slide 3"
           />
@@ -49,7 +48,7 @@ function FirstCarousel({ activeIndex, setActiveIndex }) {
       <Carousel.Item>
         <div className="carousel-item-wrapper">
           <img
-            className="d-block carousel-img"
+            className="carousel-img"
             src={usa}
             alt="Slide 4"
           />
@@ -58,7 +57,7 @@ function FirstCarousel({ activeIndex, setActiveIndex }) {
       <Carousel.Item>
         <div className="carousel-item-wrapper">
           <img
-            className="d-block carousel-img"
+            className="carousel-img"
             src={elastic}
             alt="Slide 5"
           />
@@ -67,7 +66,7 @@ function FirstCarousel({ activeIndex, setActiveIndex }) {
       <Carousel.Item>
         <div className="carousel-item-wrapper">
           <img
-            className="d-block carousel-img"
+            className="carousel-img"
             src={online}
             alt="Slide 6"
           />
@@ -76,7 +75,7 @@ function FirstCarousel({ activeIndex, setActiveIndex }) {
       <Carousel.Item>
         <div className="carousel-item-wrapper">
           <img
-            className="d-block carousel-img"
+            className="carousel-img"
             src={emma}
             alt="Slide 7"
           />
@@ -85,7 +84,7 @@ function FirstCarousel({ activeIndex, setActiveIndex }) {
        <Carousel.Item>
         <div className="carousel-item-wrapper">
           <img
-            className="d-block carousel-img"
+            className="carousel-img"
             src={trash}
             alt="Slide 8"
           />

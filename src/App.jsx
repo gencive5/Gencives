@@ -149,7 +149,7 @@ function App() {
             
               {showContact && (
               <div className="contact-text-container">
-                <p className="contact-text" style={{ fontSize }}>@gencive5 <br />vic.segen@gmail.com</p>
+                <p className="contact-text" style={{ fontSize }}>@gencive5 <br />contact@genciv.es</p>
               </div>
               )}
               </div>
